@@ -6,7 +6,7 @@
 <?php $spec_services = array(
     1 => array(
         'name' => 'Хімчистка<br> одягу і<br> взуття',
-        'pic_name' => 'himchistka.svg',
+        'pic_name' => 'f-i-1.png',
         'url' => 'https://ua.unmomento.com.ua/uslugi/',
         'target' => '_self',
         'nofollow' => false
@@ -65,7 +65,7 @@
                     <?php if($spec_service['nofollow'] === true) { echo 'rel="nofollow"';}?>
                     class="block-link"></a>
                     <div class="special-service-img_fix">
-                        <img loading="lazy" class="fits" alt="" src="/templates/img/<?php echo $spec_service['pic_name'] ?>"/>
+                        <img loading="lazy" class="fits" alt="" src="/templates/build/img/<?php echo $spec_service['pic_name'] ?>"/>
                     </div>
                     <div class="special-service-title"><?php echo $spec_service['name'] ?></div>
                 </div>

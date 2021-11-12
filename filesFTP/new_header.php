@@ -91,7 +91,7 @@
 
                     <ul>
                         <!--                     class="menu_desk wwwwwww"-->
-
+<!--                        <p>--><?php //echo $head['id'] ?><!--</p>-->
                         <li><a class="active" href="/">Головна</a></li>
                         <?php
                         $i = 0;
