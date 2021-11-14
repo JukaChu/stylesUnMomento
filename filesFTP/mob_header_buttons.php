@@ -1,6 +1,11 @@
-<ul class="nav-btn_mob">
-    <!--li><a href="https://ua.unmomento.com.ua/uslugi/">ПОСЛУГИ</a></li-->
-    <li><a href="https://ua.unmomento.com.ua/onlain-zakaz/">ЗАМОВИТИ<br/>КУР'ЄРА</a></li>
-    <li><a href="https://ua.unmomento.com.ua/tseny/">ЦІНИ</a></li>
-    <li><a href="https://ua.unmomento.com.ua/o-kompanii/kontakty.html">ПРИЙМАЛЬНІ<br/>ПУНКТИ</a></li>
-</ul>
+
+<div class="mobile-buttons">
+    <div class="container">
+        <ul class="">
+            <li><a href="/novosti/">Акції</a></li>
+            <li><a href="/o-kompanii/kontakty.html">Адреси</a></li>
+            <li><a href="/tseny/">Ціни</a></li>
+        </ul>
+
+    </div>
+</div>
