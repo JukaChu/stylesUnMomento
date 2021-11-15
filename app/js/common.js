@@ -182,8 +182,7 @@ function goCardsSlider() {
                 // Optional parameters
                 loop: false,
                 slidesPerView: 2,
-                slidesPerColumn: 2,
-                slidesPerGroup: 2,
+                slidesPreGroup: 2,
                 grid: {
                     rows: 2,
                 },
@@ -212,14 +211,13 @@ function goCardsSlider() {
 
                     // when window width is >= 480px
                     620: {
+                        loop: false,
                         slidesPerView: 3,
-                        slidesPerColumn: 3,
-                        slidesPerGroup: 3,
+                        spaceBetween: 36,
+                        slidesPreGroup: 3,
                         grid: {
                             rows: 2,
                         },
-                        spaceBetween: 36,
-
                     },
                 },
 
@@ -229,6 +227,101 @@ function goCardsSlider() {
 }
 
 goCardsSlider();
+
+
+
+let servicesAll = [...document.querySelectorAll('.cards-section.js-section')];
+
+function serviceSlider() {
+    if (!servicesAll.length) {
+
+    } else {
+        servicesAll.forEach((sld) => {
+            let sldCont = sld.querySelector('.cards-list');
+            let pagin = sld.querySelector('.dots');
+            let sldNext = sld.querySelector('.btn-slides--next');
+            let sldPrev = sld.querySelector('.btn-slides--prev');
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 2,
+                speed: 600,
+                spaceBetween: 10,
+
+
+                autoplay: {
+                    delay: 4600,
+                    pauseOnMouseEnter: true,
+                },
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                pagination: {
+                    el: pagin,
+                    type: 'bullets',
+                    bulletActiveClass: 'active',
+                    bulletClass: 'single-dot',
+                    bulletElement: 'div',
+                    clickable: true,
+                    currentClass: 'current',
+                    spaceBetween: 2,
+                },
+                breakpoints: {
+                    // when window width is >= 320px
+
+                    // when window width is >= 480px
+                    620: {
+                        slidesPerView: 3,
+                        spaceBetween: 36,
+                    },
+                },
+
+            });
+        })
+    }
+}
+
+serviceSlider();
+
+
+
+let priceBlock = [...document.querySelectorAll('.price-slider.js-slider')];
+
+function priceSlider() {
+    if (!priceBlock.length) {
+
+    } else {
+        priceBlock.forEach((sld) => {
+            let sldCont = sld.querySelector('.price-slider__container');
+            let pagin = sld.querySelector('.dots');
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 'auto',
+                speed: 600,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 4000,
+                    pauseOnMouseEnter: true,
+                },
+                pagination: {
+                    el: pagin,
+                    type: 'bullets',
+                    bulletActiveClass: 'active',
+                    bulletClass: 'single-dot',
+                    bulletElement: 'div',
+                    clickable: true,
+                    currentClass: 'current',
+                    spaceBetween: 2,
+                },
+
+            });
+        })
+    }
+}
+
+priceSlider();
 
 //sliders
 
@@ -245,3 +338,93 @@ function openSeoText() {
     }
 }
 openSeoText();
+
+
+let btnFilterPrice = [...document.querySelectorAll('.filter-side-btn')];
+
+function openPriceFil() {
+    if (btnFilterPrice.length) {
+        btnFilterPrice.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.container_prise').classList.toggle('hidden-bar');
+            })
+        })
+    }
+}
+
+openPriceFil();
+
+let btnPrice = [...document.querySelectorAll('.price-list__btn')];
+
+function openPriceList() {
+    if (btnPrice.length) {
+        btnPrice.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.block_prise').classList.toggle('hidden-btn');
+            })
+        })
+    }
+}
+
+openPriceList();
+
+
+
+
+let beforeAfter = [...document.querySelectorAll('.compare.js-slider')];
+
+function beforeSlider() {
+    if (!beforeAfter.length) {
+
+    } else {
+        beforeAfter.forEach((sld) => {
+            let sldCont = sld.querySelector('.compare__container');
+            let pagin = sld.querySelector('.dots');
+            let sldNext = sld.querySelector('.btn-slides--next');
+            let sldPrev = sld.querySelector('.btn-slides--prev');
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 1,
+                speed: 600,
+                spaceBetween: 10,
+
+
+                autoplay: {
+                    delay: 4600,
+                    pauseOnMouseEnter: true,
+                },
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                pagination: {
+                    el: pagin,
+                    type: 'bullets',
+                    bulletActiveClass: 'active',
+                    bulletClass: 'single-dot',
+                    bulletElement: 'div',
+                    clickable: true,
+                    currentClass: 'current',
+                    spaceBetween: 2,
+                },
+                breakpoints: {
+                    // when window width is >= 320px
+
+                    // when window width is >= 480px
+                    525: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    769: {
+                        slidesPerView: 3,
+                        spaceBetween: 36,
+                    },
+                },
+
+            });
+        })
+    }
+}
+
+beforeSlider();

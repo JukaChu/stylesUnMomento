@@ -1,4 +1,66 @@
+@media screen and (max-width: 1070px) {
+  .cards-slider {
+
+    .btn-slides {
+      position: absolute;
+      top: calc(50% - 10px);
+      transform: translate(0, -50%);
+      border: 1px solid #00B9ED;
+      z-index: 2;
+      &--prev {
+        right: 100%;
+      }
+      &--next {
+        left: 100%;
+      }
+    }
+  }
+  .cards-section.js-section .btn-slides {
+    &--prev {
+      right: 100%;
+      z-index: 2;
+    }
+    &--next {
+      left: 100%;
+      z-index: 2;
+    }
+  }
+}
 @media screen and (max-width: 1023px) {
+  .news__other-cont .single-card .img {
+    height: 128px;
+  }
+  .news__other {
+    margin-left: 12px;
+    width: 230px;
+  }
+  .news__other-cont .single-card {
+    margin-bottom: 12px;
+  }
+  .cards-section.js-section .btn-slides {
+    &--prev {
+      right: auto;
+      left: 0;
+    }
+    &--next {
+      left: auto;
+      right: 0;
+    }
+  }
+  .cards-slider {
+
+    .btn-slides {
+
+      &--prev {
+        right: auto;
+        left: 0;
+      }
+      &--next {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
   .single-achiv {
 
     .img {
@@ -184,8 +246,66 @@
   .footer-menu {
     margin-right: 10%;
   }
+  .desktop-buttons {
+    margin-bottom: 20px;
+  }
+  .desk-btn {
+    margin-right: 10px;
+    width: calc((100% / 3) - (20px / 3));
+    padding: 7px;
+    font-size: 9px;
+    line-height: 125%;
+  }
+  .desk-socials {
+    margin-top: 7px;
+  }
 }
 @media screen and (max-width: 812px) {
+  .content_col .popup-tip-wrap {
+    left: auto;
+    width: 250px;
+    .popup-tip {
+      font-size: 8px;
+      line-height: 10px;
+    }
+  }
+  .compare h2 {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+  .price-title {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+  .price-side .container_prise .top_sidebar {
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    h1 {
+      font-size: 14px;
+    }
+  }
+  .price-list .table_prise .hed_row .content_col {
+    font-size: 8px;
+  }
+  .price-list .table_prise .content_row .content_col {
+    font-size: 10px;
+  }
+  .compare-slide {
+    height: 210px;
+  }
+  .form-price__result .prise_result {
+    font-size: 14px;
+    span {
+      font-size: 14px;
+    }
+  }
+  .btn-slides {
+    display: none !important;
+  }
+  .cards-slider__container {
+    height: 698px;
+  }
   .mobile-buttons {
     width: 100%;
     display: flex;
@@ -391,6 +511,71 @@
 
 }
 @media screen and (max-width: 767px) {
+  .news-inner__block {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .news-inner {
+    margin: 20px 0 25px;
+  }
+  .news-inner__main {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .news__other {
+    width: 100%;
+    margin-left: 0;
+    > .btn {
+      width: auto;
+      margin-top: 20px;
+    }
+  }
+  .news__other-cont {
+    width: calc(100% + 24px);
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 12px;
+    box-sizing: border-box;
+    margin: -12px;
+
+    .single-card {
+      margin-bottom: 0;
+      margin-right: 10px;
+      width: calc((100% / 3) - (20px / 3));
+      flex-shrink: 0;
+      .img {
+        height: 145px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .news-inner__main {
+    h1 {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+  }
+  .news-inner__main .text *:not(.btn) {
+    font-size: 10px !important;
+  }
+  .news-inner__main .tag {
+    margin-bottom: 20px;
+  }
+  .news-inner__main .img {
+    margin-bottom: 20px;
+  }
+  .news-inner__main .text .btn {
+    width: 80%;
+  }
+  .all-cards {
+    margin-bottom: 25px;
+  }
   .cards-section__container .main-title {
     font-size: 18px;
     line-height: 1.2;
@@ -478,8 +663,147 @@
   }
 
 }
-
+@media screen and (max-width: 620px) {
+  .price-list .table_prise .content_row {
+    display: flex;
+  }
+  .form-prices {
+    margin-top: 0;
+  }
+  .price-list .table_prise .content_col:nth-child(1) {
+    padding-left: 10px;
+    padding-right: 4px;
+    width: 35%;
+  }
+  .price-list .table_prise .content_col {
+    &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+      width: calc(65% / 3);
+    }
+  }
+  .table_prise .content_row {
+    padding: 0;
+  }
+  .q-mark {
+    width: 9px;
+    height: 9px;
+    line-height: 9px;
+    font-size: 6px;
+  }
+  .price-block__content {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    padding-bottom: 254px;
+    .form-prices {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+  .price-title {
+    margin-bottom: 8px;
+  }
+  .price-side .container_prise.hidden-bar {
+    max-height: 210px;
+  }
+  .price-side {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .price-list {
+    width: 100%;
+  }
+  .price-list .block_prise.hidden-btn #priceArea .table_prise {
+    max-height: 250px;
+  }
+  .cards-section.js-section .cards-list {
+    padding: 10px;
+    margin: -10px;
+    width: calc(100% + 20px);
+  }
+  .cards-section {
+    margin-bottom: 25px;
+  }
+  .service-subtitle {
+    margin-bottom: 16px;
+  }
+  .breadcrumbs-block {
+    margin-bottom: 5px;
+  }
+  .breadcrumbs-list {
+    overflow-x: auto;
+    padding-bottom: 5px;
+    li {
+      flex-shrink: 0;
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+  .cards-slider__container {
+    width: calc(100% + 20px);
+    padding: 10px;
+    margin: 0 -10px;
+    box-sizing: border-box;
+    height: 665px;
+    .single-card {
+      height: calc((100% - 10px) / 2);
+    }
+  }
+}
 @media screen and (max-width: 600px) {
+  .compare-slide {
+    height: 160px;
+  }
+  .price-slider {
+    display: flex;
+    &__container {
+      height: 170px;
+    }
+  }
+  .news__other-cont .single-card {
+    width: calc((100% / 2) - 5px);
+    flex-shrink: 0;
+  }
+  .news__other > .btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .desk-buttons__list {
+
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .desk-btn {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .desk-soc {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .cards-slider__container {
+    height: 520px;
+  }
+  .btn {
+    font-size: 6px;
+    padding: 3px;
+    line-height: 125%;
+  }
   .footer__container {
     flex-wrap: wrap;
     padding: 15px 20px 10px;
@@ -783,5 +1107,8 @@
   .footer .footer-logo {
     width: 120px;
     margin-right: calc(50% - 120px);
+  }
+  .compare-slide{
+    height: 190px;
   }
 }

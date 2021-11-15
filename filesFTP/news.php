@@ -8,8 +8,8 @@ FROM content WHERE parentid = 2890 AND ispublish = 1 ORDER BY showorder"); ?>
             <h1 class="main-title">Новини</h1>
 
             <div class="cards-slider">
-                <div class="cards-slider__container swiper-container ">
-                    <div class="swiper-wrapper grid-container">
+                <div class="cards-slider__container swiper-container">
+                    <div class="swiper-wrapper">
                         <?
                         $i = 0;
                         foreach($arr as $r)
@@ -54,6 +54,12 @@ FROM content WHERE parentid = 2890 AND ispublish = 1 ORDER BY showorder"); ?>
 
                 </div>
                 <div class="slider-buttons">
+                    <div class="btn-slides btn-slides--prev"><svg width="28" height="88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M26.5 2l-24 42 24 42"  stroke-width="3" stroke-linecap="round"/>
+                        </svg></div>
+                    <div class="btn-slides btn-slides--next"><svg width="28" height="88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M26.5 2l-24 42 24 42"  stroke-width="3" stroke-linecap="round"/>
+                        </svg></div>
 
                 </div>
             </div>
@@ -61,54 +67,7 @@ FROM content WHERE parentid = 2890 AND ispublish = 1 ORDER BY showorder"); ?>
         
 
     </section>
-</main>
-<div class="container_news def">
-    <h1 style ="display:none;">Новини</h1>
-    <div class="main_content block_margin clear_after">
-        <div class="presentation_block clear_after container all-news-container">
-            <?
-$i = 0;
-foreach($arr as $r)
-{
-    $i++;
-    $images = getImages($r["id"],1);
-    $img =  getImageById($r["imid"]);
-    if($img == "/templates/images/nofoto.jpg")
-    {
-        $img = "/images/no.png";
-    }
-    if(count($images) > 1)
-    {
-        $img = $images[1];
-    }
-    ?>
-                <div  class="block_def <? if ($i==1) { echo('blue');
-                } else if($i==2) {  echo('green');
-                } else {  echo('orange');
-                } ?>">
-                <a class="block-link" href="/<?=$r["url"]?>"></a>       
-                <div class="block_def_fix">
-                    <div class="foto">
-                        <div class="foto-inner" style="background-image:url('/images/files/<?=$img["image"]?>')"></div>
-                    </div>
-                    <div class="block_info">
-                        <div class="block_info-inner">
-                            <span class="vfix"></span>
-                            <div class="container_vfix">
-                                <div class="description">
-                                   <?=$r["name"]?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                </div>
-    <?
-    if($i == 3) { $i = 0; }
-}
-?>
-        </div>
-    </div>
-</div>
-<div class="clear"></div>
+    <?php include 'desk-buttons-nav.php'; ?>
+</main>
+

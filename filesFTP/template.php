@@ -105,7 +105,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <!--    <link type="text/css" href="https:///www.uaum.ppa.kiev.ua/templates/build/newcss/main.min.css" rel="stylesheet"/>-->
-    <link type="text/css" href="<?php echo _TEMPL.'build/libs/swiper.min.css'?>" rel="stylesheet"/>
+    <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link type="text/css" href="<?php echo _TEMPL.'build/newcss/main.min.css'?>" rel="stylesheet"/>
 </head>
 <body class="<?php echo "$content_type-{$head['id']}";?>">
@@ -123,7 +124,7 @@
 <?php
 $service_class =  ($head['parentid'] == '23')?'service-inner':'';
 $search_class = ($head['parentid'] == '2890')?'padding-70':'';?>
-<div class="global-wrap <?php echo $service_class.' '.$search_class;?>">
+<div class="global-wrap">
 
 <?php include 'new_header.php';?>
 
@@ -388,11 +389,12 @@ else if ($head['parentid'] == '2890' || $head['parentid'] == '3078'){ ?>
 <?php
 if($head["urlname"] != "index")
 {?>
-<div class="container_bredcrams">
-    <div class="main_content">
-        <ul class="bredcrams"><?php echo get_path(); ?></ul>
-    </div>
-</div>
+        <section class="breadcrumbs-block">
+            <div class="container">
+                <ul class="breadcrumbs-list"><?php echo get_path(); ?></ul>
+            </div>
+        </section>
+
     <?
 }
 ?>
@@ -658,7 +660,8 @@ if($head["urlname"] != "index")
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 
-<script src="<?php echo _TEMPL.'build/libs/swiper.min.js'?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="<?php echo _TEMPL.'build/js/scripts.min.js'?>"></script>
 
 </body>
