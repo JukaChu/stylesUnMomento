@@ -14954,6 +14954,8 @@ a.single-achiv {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
+    .news-inner__main .text p {
+      width: 100%; }
     .news-inner__main .text *:not(.btn) {
       font-size: 12px !important;
       line-height: 1.4 !important;

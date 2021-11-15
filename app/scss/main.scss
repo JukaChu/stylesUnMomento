@@ -1831,7 +1831,9 @@ a.single-achiv {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-
+    p {
+      width: 100%;
+    }
     *:not(.btn) {
       font-size: 12px !important;
       line-height: 1.4 !important;
