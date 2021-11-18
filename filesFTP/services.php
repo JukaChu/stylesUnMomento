@@ -157,6 +157,8 @@
         </section>
         <?php $service_cat_counter++;
         } ?>
+        <div class="mob-only-btn">
         <?php include 'desk-buttons-nav.php'; ?>
+        </div>
 
 </main>

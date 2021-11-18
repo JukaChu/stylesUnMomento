@@ -1052,6 +1052,9 @@ a.single-achiv {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  .dots {
+    display: none;
+  }
   .main-title {
     margin-bottom: 20px;
     font-size: 24px;
@@ -1062,6 +1065,10 @@ a.single-achiv {
       transform: translate(-50%, 0);
     }
   }
+}
+.mob-only-btn {
+  display: none;
+  width: 100%;
 }
 .cards-list {
   width: 100%;
@@ -1494,6 +1501,9 @@ a.single-achiv {
   width: 100%;
   margin-top: 10px;
   position: relative;
+  .dots {
+    display: none;
+  }
   .btn-slides {
     position: absolute;
     top: calc(50% - 10px);
@@ -1547,7 +1557,6 @@ a.single-achiv {
     }
   }
   &:hover {
-    border: 1px solid #00B9ED;
     box-shadow: 3px 3px 8px 1px rgba(0, 185, 237, 0.25);
     transition: border 0.3s ease, box-shadow 0.3s ease;
 
@@ -1831,6 +1840,9 @@ a.single-achiv {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    iframe {
+      margin: 20px 0;
+    }
     p {
       width: 100%;
     }
@@ -2138,6 +2150,7 @@ a.single-achiv {
     align-items: stretch;
     justify-content: flex-start;
     padding-bottom: 11px;
+    position: relative;
   }
   .table_prise .hed_row .content_col {
     font-style: normal;
@@ -2148,7 +2161,7 @@ a.single-achiv {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(0, 0, 0, 0.25);
+    color: #000;
     &:nth-child(1) {
 
     }
@@ -2212,6 +2225,12 @@ a.single-achiv {
   }
   .table_prise .hed_row {
     border-bottom: none;
+  }
+  .content_col .popup-tip-wrap {
+    width: 100%;
+  }
+  .content_col.showMeTip{
+    position: static;
   }
   .table_prise .content_col {
     &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
@@ -2371,8 +2390,10 @@ a.single-achiv {
 
 .compare {
   width: 100%;
-  margin-bottom: 20px;
-
+  margin-bottom: 42px;
+  .dots {
+    display: none;
+  }
   h2 {
     width: 100%;
     display: inline-block;

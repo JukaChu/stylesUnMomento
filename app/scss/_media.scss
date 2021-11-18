@@ -261,6 +261,26 @@
   }
 }
 @media screen and (max-width: 812px) {
+  .compare {
+    margin-bottom: 20px;
+    .dots {
+      display: flex;
+    }
+  }
+  .mob-only-btn {
+    display: flex;
+    width: 100%;
+  }
+  .cards-section__container {
+    .dots {
+      display: flex;
+    }
+  }
+  .cards-slider {
+    .dots {
+      display: flex;
+    }
+  }
   .content_col .popup-tip-wrap {
     left: auto;
     width: 250px;
