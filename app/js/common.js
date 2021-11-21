@@ -181,13 +181,13 @@ function goCardsSlider() {
             const swiper2 = new Swiper(sldCont, {
                 // Optional parameters
                 loop: false,
-                slidesPerView: 2,
-                slidesPreGroup: 2,
-                grid: {
-                    rows: 2,
-                },
+                spaceBetween: 36,
+                slidesPerView: 3,
+                slidesPerColumn: 2,
+                slidesPerGroup:1,
+                slidesPerColumnFill: 'row',
                 speed: 600,
-                spaceBetween: 10,
+                // spaceBetween: 10,
                 autoplay: {
                     delay: 4000,
                     pauseOnMouseEnter: true,
@@ -212,12 +212,12 @@ function goCardsSlider() {
                     // when window width is >= 480px
                     620: {
                         loop: false,
-                        slidesPerView: 3,
-                        spaceBetween: 36,
-                        slidesPreGroup: 3,
-                        grid: {
-                            rows: 2,
-                        },
+                        spaceBetween: 10,
+                        slidesPerView: 2,
+                        slidesPerColumn: 2,
+                        slidesPerGroup:1,
+                        slidesPerColumnFill: 'row',
+
                     },
                 },
 
@@ -244,9 +244,9 @@ function serviceSlider() {
             const swiper2 = new Swiper(sldCont, {
                 // Optional parameters
                 loop: false,
-                slidesPerView: 2,
+                slidesPerView: 3,
                 speed: 600,
-                spaceBetween: 10,
+                spaceBetween: 36,
 
 
                 autoplay: {
@@ -272,8 +272,8 @@ function serviceSlider() {
 
                     // when window width is >= 480px
                     620: {
-                        slidesPerView: 3,
-                        spaceBetween: 36,
+                        slidesPerView: 2,
+                        spaceBetween: 10,
                     },
                 },
 
@@ -385,9 +385,9 @@ function beforeSlider() {
             const swiper2 = new Swiper(sldCont, {
                 // Optional parameters
                 loop: false,
-                slidesPerView: 1,
+                slidesPerView: 3,
                 speed: 600,
-                spaceBetween: 10,
+                spaceBetween: 36,
 
 
                 autoplay: {
@@ -412,13 +412,13 @@ function beforeSlider() {
                     // when window width is >= 320px
 
                     // when window width is >= 480px
-                    525: {
+                    769: {
                         slidesPerView: 2,
                         spaceBetween: 20,
                     },
-                    769: {
-                        slidesPerView: 3,
-                        spaceBetween: 36,
+                    525: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
                     },
                 },
 
@@ -428,3 +428,48 @@ function beforeSlider() {
 }
 
 beforeSlider();
+
+
+let cardsSliderVideo = [...document.querySelectorAll('.cards-slider--video')];
+function goCardsSliderVideo() {
+    if (!cardsSliderVideo.length) {
+
+    } else {
+        cardsSliderVideo.forEach((sld) => {
+            let sldCont = sld.querySelector('.cards-slider__container');
+            let pagin = sld.querySelector('.dots');
+            let sldNext = sld.querySelector('.btn-slides--next');
+            let sldPrev = sld.querySelector('.btn-slides--prev');
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                slidesPerView: 'auto',
+                slidesPerColumn: 3,
+                slidesPerGroup: 1,
+                // spaceBetween: 36,
+                slidesPerColumnFill: 'row',
+                pagination: false,
+
+                breakpoints: {
+                    // when window width is >= 320px
+
+                    // when window width is >= 480px
+                    970: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    600: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 0,
+                        draggable: false,
+                        touchAction: false,
+                        allowTouchMove: false,
+                        slidesPerColumn: 'auto',
+                    },
+                },
+
+            });
+        })
+    }
+}
+
+goCardsSliderVideo();
