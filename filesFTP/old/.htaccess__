@@ -1,0 +1,81 @@
+AddDefaultCharset utf-8
+RewriteEngine On
+DirectoryIndex index.php
+
+RewriteCond     %{SERVER_PORT} ^80$
+RewriteRule     ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
+
+
+RewriteRule ^o-kompanii/o-kompanii.html/ishem-subarendatorov/$ http:://ua.unmomento.com.ua/o-kompanii/ishem-subarendatorov/ [R=301,L]
+RewriteRule ^o-kompanii/o-kompanii.html$ /o-kompanii/o-kompanii/ [R=301,L]
+RewriteRule ^novosti/prodazha-professionalnoy-himii-dlya-himchistok-i-prachechnyh.html$ http:://ua.unmomento.com.ua/o-kompanii/o-kompanii/prodazha-professionalnyh-zhidkih-sredstv-dlja-stirki/ [R=301,L]
+RewriteRule ^uslugi/professionalnyy-klining.html$ http:://umcleaning.com [R=301,L]
+RewriteRule ^himchistka-mjagkoi-mebeli/$ http:://umcleaning.com/himchistka-myagkoj-mebeli/ [R=301,L]
+RewriteRule ^^uslugi/himchistka-mjagkoi-mebeli/$ http:://umcleaning.com/himchistka-myagkoj-mebeli/ [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} -f [NC,OR]
+RewriteCond %{REQUEST_FILENAME} -d [NC]
+RewriteRule .* - [L]
+
+
+RewriteRule ^kiev/21.html?$ index.php?content=content&key=2669&page=2 [L]
+RewriteRule ^kiev/41.html?$ index.php?content=content&key=2669&page=3 [L]
+
+RewriteRule ^stati/([A-Za-z0-9-/]+)_([0-9]+)/?$ index.php?content=articles&id=$2 [L]
+RewriteRule ^stati/_([0-9]+)/?$ index.php?content=articles&id=$1 [L]
+RewriteRule ^stati/([0-9]+)/?$ index.php?content=articles&page=$1 [L]
+RewriteRule ^stati/?$ index.php?content=articles [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !.html$
+RewriteCond %{REQUEST_URI} !.php$
+RewriteCond %{REQUEST_URI} !.xml$
+RewriteCond %{REQUEST_URI} !.htm$
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ https://ua.unmomento.com.ua/$1/ [L,R=301]
+
+RewriteRule ^sitemap.xml?$ sitemap.php [L]
+
+RewriteRule ^search/([^/\.]+).html?$ index.php?content=search&stext=$1 [L]
+
+
+RewriteCond %{QUERY_STRING} ^stext=(.*)$
+RewriteRule ^([A-Za-z0-9-]+)/?$ index.php?content=content&id=$1&stext=%1 [L]
+
+
+RewriteRule ^([A-Za-z0-9-/]+)/([0-9]+)/?$ index.php?content=content&id=$1&page=$2 [L]
+
+RewriteRule ^([A-Za-z0-9-/]+)/([0-9]+)?$ index.php?content=content&id=$1 [L]
+
+RewriteCond %{QUERY_STRING} ^([^/\.]*)$
+RewriteRule ^([A-Za-z0-9-/]+)/?$ index.php?content=content&id=$1&%1 [L]
+
+RewriteRule ^(.*)?$ index.php?content=content&id=$1 [L]
+
+
+
+ErrorDocument 404  /404.html
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+## EXPIRES CACHING ##

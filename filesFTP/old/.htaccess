@@ -1,0 +1,224 @@
+AuthType    Basic
+AuthUserFile    "/var/www/ppaM5w/.htpasswd"
+AuthName    "ppa.kiev.ua"
+Order       Allow,Deny
+Allow from  all
+Require user    admin
+
+AddDefaultCharset utf-8
+RewriteEngine On
+DirectoryIndex index.php
+
+RewriteCond     %{SERVER_PORT} ^80$
+RewriteRule     ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R=301]
+
+
+
+# One year for image files
+<filesMatch ".(jpg|jpeg|png|gif|ico|woff|otf|ttf)$">
+    Header set Cache-Control "max-age=31536000, public"
+</filesMatch>
+# One month for css and js
+<filesMatch ".(css|js)$">
+    Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access 1 year"
+    ExpiresByType image/jpeg "access 1 year"
+    ExpiresByType image/gif "access 1 year"
+    ExpiresByType image/png "access 1 year"
+    ExpiresByType text/css "access 1 month"
+    ExpiresByType text/html "access 1 month"
+    ExpiresByType application/pdf "access 1 month"
+    ExpiresByType text/x-javascript "access 1 month"
+    ExpiresByType application/x-shockwave-flash "access 1 month"
+    ExpiresByType image/x-icon "access 1 year"
+    ExpiresDefault "access 1 month"
+</IfModule>
+## EXPIRES CACHING ##
+
+<IfModule mod_headers.c>
+    Header set X-UA-Compatible "IE=Edge,chrome=1"
+    # mod_headers can't match by content-type, but we don't want to send this header on *everything*...
+    <FilesMatch "\.(appcache|crx|css|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|otf|pdf|png|safariextz|svg|svgz|ttf|vcf|webm|webp|woff|xml|xpi)$">
+        Header unset X-UA-Compatible
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+<FilesMatch "(\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp)|~)$">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</FilesMatch>
+
+# Increase cookie security
+<IfModule mod_php5.c>
+    php_value session.cookie_httponly true
+</IfModule>
+
+RewriteRule ^uslugi/prodazha-professionalnyh-zhidkih-sredstv-dlja-stirki/$ http://ua.shop.umcleaning.kiev.ua/ [R=301,L]
+
+RewriteRule ^uslugi/himchistka/$ /uslugi/ [R=301,L]
+RewriteRule ^stati/_89/$  /stati/89/jak-dogljadati-za-b%D1%96limi-kros%D1%96vkami.html  [R=301,L]
+RewriteRule ^stati/_9/$   /stati/9/b%D1%96o-chistka-porjatunok-dlja-alerg%D1%96k%D1%96v.html  [R=301,L]
+RewriteRule ^stati/_10/$  /stati/10/chi-%D1%94-v%D1%96k-u-pljami-chi-mozhna-vivesti-pljamu-m%D1%96sjachno%D1%97-davnost%D1%96.html  [R=301,L]
+RewriteRule ^stati/_11/$  /stati/11/dizainerskii-odjag-jak-vibrati-pravilnii-dogljad-za-eksklyuzivnimi-rechami.html  [R=301,L]
+RewriteRule ^stati/_13/$  /stati/13/chi-varto-v-domashn%D1%96h-umovah-vivoditi-pljami-nasl%D1%96dki-babusinih-recept%D1%96v.html  [R=301,L]
+RewriteRule ^stati/_12/$  /stati/12/h%D1%96mchistka-v-m%D1%96st%D1%96-nebezpeka-abo-m%D1%96f.html  [R=301,L]
+RewriteRule ^stati/_14/$  /stati/14/chi-potrebu%D1%94-nove-vzuttja-v-prof%D1%96laktic%D1%96-p%D1%96dgotovka-vzuttja-do-sezonu.html  [R=301,L]
+RewriteRule ^stati/_16/$  /stati/16/jak-pravilno-p%D1%96d%D1%96brati-ekolog%D1%96chn%D1%96-chistjach%D1%96-zasobi-dlja-prannja.html  [R=301,L]
+RewriteRule ^stati/_15/$  /stati/15/jak-pravilno-zber%D1%96gati-hutrjan%D1%96-rech%D1%96.html  [R=301,L]
+RewriteRule ^stati/_17/$  /stati/17/tehnolog%D1%96ja-chishennja-shk%D1%96rjanih-rechei-chomu-tak-dovgo.html  [R=301,L]
+RewriteRule ^stati/_19/$  /stati/19/sho-take-vuglevodneva-chistka.html [R=301,L]
+RewriteRule ^stati/_18/$  /stati/18/jak-zapob%D1%96gti-pojav%D1%96-nepri%D1%94mnogo-zapahu-vzuttja.html  [R=301,L]
+RewriteRule ^stati/_20/$  /stati/20/prannja-ta-rozv%D1%96shuvannja-gardin-p%D1%96slja-chistki.html  [R=301,L]
+RewriteRule ^stati/_22/$  /stati/22/p%D1%96sljabud%D1%96velnogo-%D1%96-p%D1%96sljaremontnii-kl%D1%96n%D1%96ng.html  [R=301,L]
+RewriteRule ^stati/_21/$  /stati/21/sekreti-profes%D1%96onal%D1%96v-po-dogljadu-za-rechami-z-pl%D1%96sirovkoyu.html  [R=301,L]
+RewriteRule ^stati/_23/$  /stati/23/kl%D1%96n%D1%96ngova-kompan%D1%96ja-jaku-vibrati.html  [R=301,L]
+RewriteRule ^stati/_25/$  /stati/25/del%D1%96katna-h%D1%96mchistka-kilim%D1%96v.html  [R=301,L]
+RewriteRule ^stati/_24/$  /stati/24/mittja-v%D1%96trin-%D1%96-v%D1%96kon-sprava-ruk-profes%D1%96onal%D1%96v.html  [R=301,L]
+RewriteRule ^stati/_28/$  /stati/28/poslugi-h%D1%96mchistki-m-jakih-mebl%D1%96v-na-domu.html  [R=301,L]
+RewriteRule ^stati/_31/$  /stati/31/pribirannja-kotedzh%D1%96v-profes%D1%96inii-kl%D1%96n%D1%96ng.html  [R=301,L]
+RewriteRule ^stati/_30/$  /stati/30/profes%D1%96in%D1%96-preparati-dlja-kl%D1%96n%D1%96ngu-ta-%D1%97h-plyusi.html  [R=301,L]
+RewriteRule ^stati/_32/$  /stati/32/pribirannja-of%D1%96su-ce-prosto.html  [R=301,L]
+RewriteRule ^stati/_34/$  /stati/34/jak-vrjatuvati-shovkovu-r%D1%96ch-z-poshkodzheno%D1%97-teksturoyu-tkanini.html  [R=301,L]
+RewriteRule ^stati/_33/$  /stati/33/h%D1%96mchistka-ditjachogo-odjagu.html  [R=301,L]
+RewriteRule ^stati/_35/$  /stati/35/h%D1%96mchistka-kilim%D1%96v-ta-kilimovih-pokritt%D1%96v-sposobi-%D1%96-specif%D1%96ka.html  [R=301,L]
+RewriteRule ^stati/_37/$  /stati/37/kl%D1%96n%D1%96ng-v-ki%D1%94v%D1%96-chistota-%D1%96-komfort.html  [R=301,L]
+RewriteRule ^stati/_36/$  /stati/36/h%D1%96mchistka-odjagu-sprava-tonka.html  [R=301,L]
+RewriteRule ^stati/_40/$  /stati/40/pravilna-p%D1%96dgotovka-vzuttja-do-sezonu-garant%D1%96ja-%D1%97%D1%97-dovgo%D1%97-sluzhbi.html  [R=301,L]
+RewriteRule ^stati/_39/$  /stati/39/krasiv%D1%96-shtori-chist%D1%96-shtori.html  [R=301,L]
+RewriteRule ^stati/_49/$  /stati/49/prannja-ta-chistka-shtor-zam%D1%96tka-dlja-ledachih.html   [R=301,L]
+RewriteRule ^stati/_47/$  /stati/47/maisternja-z-remontu-odjagu-sho-potr%D1%96bno-vzjati-na-zam%D1%96tku.html  [R=301,L]
+RewriteRule ^stati/_50/$  /stati/50/profes%D1%96ine-chishennja-%D1%96grashok-vib%D1%96r-dbailivih-mam.html  [R=301,L]
+RewriteRule ^stati/_48/$  /stati/48/vivedennja-zhirnih-pljam-odjagu-golovne-bez-pan%D1%96ki-%D1%94-r%D1%96shennja.html  [R=301,L]
+RewriteRule ^stati/_53/$  /stati/53/jak-prodovzhiti-sv%D1%96zh%D1%96st-b%D1%96lizni-v-dva-razi.html  [R=301,L]
+RewriteRule ^stati/_44/$  /stati/44/jak-vivesti-pljamu.html  [R=301,L]
+RewriteRule ^stati/_54/$  /stati/54/prasuvannja-odjagu-rozk%D1%96sh-chi-neobh%D1%96dn%D1%96st.html  [R=301,L]
+RewriteRule ^stati/_46/$  /stati/46/jak-vivesti-pljamu-na-dzhinsah.html  [R=301,L]
+RewriteRule ^stati/_45/$  /stati/45/jak-vivesti-pljamu-z-b%D1%96logo-odjagu.html  [R=301,L]
+RewriteRule ^stati/_55/$  /stati/55/chistka-odjagu-sho-robiti-koli-z-javilasja-pljama.html  [R=301,L]
+RewriteRule ^stati/_52/$  /stati/52/chistka-kilim%D1%96v.html  [R=301,L]
+RewriteRule ^stati/_51/$  /stati/51/remont-odjagu.html  [R=301,L]
+RewriteRule ^stati/_56/$  /stati/56/nav%D1%96sho-potr%D1%96bna-h%D1%96mchistka.html  [R=301,L]
+RewriteRule ^stati/_58/$  /stati/58/jak-vivesti-pljamu-z-sorochki-%D1%96-futbolki.html  [R=301,L]
+RewriteRule ^stati/_57/$  /stati/57/jak-vivesti-pljamu-z-shk%D1%96ri-dzhinsa-bavovni-ta-%D1%96nshih-tkanin.html  [R=301,L]
+RewriteRule ^stati/_59/$  /stati/59/jak-v%D1%96d%D1%96prati-krov-z-odjagu-prost%D1%96-poradi.html  [R=301,L]
+RewriteRule ^stati/_61/$  /stati/61/jak-vivesti-pljamu-v%D1%96d-farbi.html  [R=301,L]
+RewriteRule ^stati/_60/$  /stati/60/jak-vivesti-masnu-pljamu-ne-zalishivshi-n%D1%96-sl%D1%96du.html  [R=301,L]
+RewriteRule ^stati/_62/$  /stati/62/jak-vivesti-pljamu-v%D1%96d-vina.html  [R=301,L]
+RewriteRule ^stati/_64/$  /stati/64/jak-vivesti-pljamu-v%D1%96d-kavi-pam-jatka-dlja-kavovih-gurman%D1%96v.html  [R=301,L]
+RewriteRule ^stati/_63/$  /stati/63/jak-vivesti-zhovta-pljama-v%D1%96d-potu-vir%D1%96shu%D1%94mo-aktualne-pitannja.html  [R=301,L]
+RewriteRule ^stati/_65/$  /stati/65/m%D1%96fi-pro-prannja.html  [R=301,L]
+RewriteRule ^stati/_67/$  /stati/67/laifhaki-dlja-vasho%D1%97-sportivno%D1%97-odjagu.html  [R=301,L]
+RewriteRule ^stati/_66/$  /stati/66/dogljad-za-vzuttjam-poradi-v%D1%96d-fah%D1%96vc%D1%96v.html  [R=301,L]
+RewriteRule ^stati/_68/$  /stati/68/laifhak-dlja-vasho%D1%97-sportivno%D1%97-odjagu.html  [R=301,L]
+RewriteRule ^stati/_70/$  /stati/70/sho-vazhlivo-znati-pro-dogljad-za-ditjachim-odjagom.html  [R=301,L]
+RewriteRule ^stati/_69/$  /stati/69/zustr%D1%96chaite-holod-pravilno.html  [R=301,L]
+RewriteRule ^stati/_71/$  /stati/71/chistka-pljam-na-kilim%D1%96-sekreti-efektivnogo-vidalennja-zabrudnen.html  [R=301,L]
+RewriteRule ^stati/_73/$  /stati/73/jak-dogljadati-za-vovnjanimi-rechami.html  [R=301,L]
+RewriteRule ^stati/_72/$  /stati/72/prannja-verhnogo-odjagu-pravila-dogljadu.html  [R=301,L]
+RewriteRule ^stati/_74/$  /stati/74/zber%D1%96gannja-hutra-ta-virob%D1%96v-z-hutra.html  [R=301,L]
+RewriteRule ^stati/_76/$  /stati/76/tufl%D1%96-chist%D1%96-potr%D1%96bn%D1%96-tufl%D1%96-c%D1%96l%D1%96-vazhliv%D1%96.html  [R=301,L]
+RewriteRule ^stati/_75/$  /stati/75/profes%D1%96ine-chishennja-shtor-zaporuka-vashogo-zatishku-%D1%96-zdorov-ja.html  [R=301,L]
+RewriteRule ^stati/_77/$  /stati/77/prasuvannja-odjagu-vih%D1%96d-zavzhdi-%D1%94.html  [R=301,L]
+RewriteRule ^stati/_80/$  /stati/80/chistka-shubi-nabiva%D1%94mo-shishki-abo-dov%D1%96rja%D1%94mo-profes%D1%96onalam.html  [R=301,L]
+RewriteRule ^stati/_78/$  /stati/78/svo%D1%94chasnii-remont-zaporuka-trivalogo-term%D1%96nu-sluzhbi-garnogo-vzuttja.html  [R=301,L]
+RewriteRule ^stati/_79/$  /stati/79/himchistka-shuby-sposob-sohranit-svoe-sokrovishe.html  [R=301,L]
+RewriteRule ^stati/_82/$  /stati/82/blisk-%D1%96-krasa-vasho%D1%97-shubi-zavzhdi.html  [R=301,L]
+RewriteRule ^stati/_81/$  /stati/81/gotui-sani-vl%D1%96tku-abo-chistimo-shubki-dlja-maibutno%D1%97-zimi.html  [R=301,L]
+RewriteRule ^stati/_83/$  /stati/83/restavrac%D1%96ja-%D1%96-remont-bez-turbot-%D1%96-klopotu.html  [R=301,L]
+RewriteRule ^stati/_85/$  /stati/85/gada%D1%94mo-po-tkaninah-abo-jaku-bluzu-vibrati.html  [R=301,L]
+RewriteRule ^stati/_84/$  /stati/84/jak-pravilno-dogljadati-za-sumkami-z-shk%D1%96ri.html  [R=301,L]
+RewriteRule ^stati/_86/$  /stati/86/chi-zna%D1%94te-vi-sho-hova%D1%94tsja-u-vash%D1%96i-m-jakih-mebl%D1%96v-%D1%96-matracah-%D1%96-sho-mozhe-stati-prichinoyu-bagatoh-zahvoryuvan-v-vash%D1%96i-rodin%D1%96.html  [R=301,L]
+RewriteRule ^stati/_88/$  /stati/88/chas-priishov-gotu%D1%94mo-rech%D1%96-do-prannja-pravilno.html  [R=301,L]
+
+RewriteRule ^stati/_26/$ /stati/26/dlja-chego-neobhodima-chistka-mebeli.html [R=301,L]
+RewriteRule ^stati/_27/$ /stati/27/jak-zberegti-chistotu-divana.html [R=301,L]
+RewriteRule ^stati/_29/$ /stati/29/generalnaja-uborka-kvartiry-mozhet-byt-v-radost.html [R=301,L]
+RewriteRule ^stati/_38/$ /stati/38/klining-v-kieve.html [R=301,L]
+
+RewriteRule ^o-kompanii/o-kompanii.html/ishem-subarendatorov/$ https:://unmomento.com.ua/o-kompanii/ishem-subarendatorov/ [R=301,L]
+RewriteRule ^o-kompanii/o-kompanii.html$ /o-kompanii/o-kompanii/ [R=301,L]
+RewriteRule ^novosti/prodazha-professionalnoy-himii-dlya-himchistok-i-prachechnyh.html$ https:://unmomento.com.ua/o-kompanii/o-kompanii/prodazha-professionalnyh-zhidkih-sredstv-dlja-stirki/ [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} -f [NC,OR]
+RewriteCond %{REQUEST_FILENAME} -d [NC]
+RewriteRule .* - [L]
+
+
+RewriteRule ^kiev/21.html?$ index.php?content=content&key=2669&page=2 [L]
+RewriteRule ^kiev/41.html?$ index.php?content=content&key=2669&page=3 [L]
+
+
+RewriteRule ^facebook_feed.csv$ facebook_feed.php [L]
+
+RewriteRule ^stati/([A-Za-z0-9-/]+)_([0-9]+)/?$ index.php?content=articles&id=$2 [L]
+RewriteRule ^stati/_([0-9]+)/?$ index.php?content=articles&id=$1 [L]
+RewriteRule ^stati/([0-9]+)/?$ index.php?content=articles&page=$1 [L]
+RewriteRule ^stati/?$ index.php?content=articles [L]
+
+RewriteRule ^stati/([0-9]+)/([A-Za-z0-9-/]+) index.php?content=articles&id=$1 [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !.html$
+RewriteCond %{REQUEST_URI} !.php$
+RewriteCond %{REQUEST_URI} !.xml$
+RewriteCond %{REQUEST_URI} !.htm$
+RewriteCond %{REQUEST_URI} !.jpeg$
+RewriteCond %{REQUEST_URI} !.jpg$
+RewriteCond %{REQUEST_URI} !.png$
+RewriteCond %{REQUEST_URI} !.woff$
+RewriteCond %{REQUEST_URI} !.ttf$
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ https://ua.unmomento.com.ua/$1/ [L,R=301]
+
+RewriteRule ^sitemap.xml?$ sitemap.php [L]
+
+RewriteRule ^search/([^/\.]+).html?$ index.php?content=search&stext=$1 [L]
+
+
+RewriteCond %{QUERY_STRING} ^stext=(.*)$
+RewriteRule ^([A-Za-z0-9-]+)/?$ index.php?content=content&id=$1&stext=%1 [L]
+
+
+RewriteRule ^([A-Za-z0-9-/]+)/([0-9]+)/?$ index.php?content=content&id=$1&page=$2 [L]
+
+RewriteRule ^([A-Za-z0-9-/]+)/([0-9]+)?$ index.php?content=content&id=$1 [L]
+
+RewriteCond %{QUERY_STRING} ^([^/\.]*)$
+RewriteRule ^([A-Za-z0-9-/]+)/?$ index.php?content=content&id=$1&%1 [L]
+
+RewriteCond %{QUERY_STRING} ^([^/\.]*)$
+RewriteRule ^(.*)?$ index.php?content=content&id=$1&%1 [L]
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^ua.unmomento\.com\.ua [NC]
+RewriteCond %{HTTP:X-Forwarded-Proto} ^http$
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+
+
+ErrorDocument 404  /404.html
+

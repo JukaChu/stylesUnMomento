@@ -43,6 +43,27 @@
   }
 }
 @media screen and (max-width: 1023px) {
+  .service-page__head > .img {
+    height: 300px;
+  }
+  .service-page__cont {
+    height: 300px;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    &.desk-only {
+      display: none;
+    }
+    &.mob-only {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+  .service-page__before-slide {
+    border-radius: 8px;
+  }
   .news__other-cont .single-card .img {
     height: 128px;
   }
@@ -322,6 +343,26 @@
   }
 }
 @media screen and (max-width: 812px) {
+  .receptions-select {
+    width: calc(50% - 18px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .service-page__text {
+    margin-bottom: 24px;
+    columns: 2;
+    column-gap: 20px;
+    p, strong, em {
+      font-size: 10px;
+      strong, em {
+        font-size: 10px;
+      }
+    }
+  }
+  .service-page__head > .img {
+    height: 260px;
+  }
   .company-side {
     margin-left: 20px;
   }
@@ -633,6 +674,92 @@
 
 }
 @media screen and (max-width: 767px) {
+  .service-page__text {
+    max-height: 180px;
+    padding-bottom: 16px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    .open-ser-txt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      cursor: pointer;
+      span {
+        background:  #00B9ED;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        margin-right: 3px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &.visible {
+      max-height: none;
+
+    }
+  }
+
+  .service-page__price .price-list .block_prise.hidden-btn div .table_prise {
+    max-height: 260px;
+  }
+  .service-page__delivery-content > .img {
+    display: none;
+  }
+  .service-deliv {
+    margin-left: 0;
+    width: 100%;
+  }
+  .service-deliv .styled-form {
+    .form-title {
+      font-size: 14px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+    }
+  }
+  .service-page__price {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .service-page__price-cont {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    .price-list {
+      width: 100%;
+    }
+    .price-side {
+      margin-top: 20px;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  .service-page__price > h2 {
+    text-align: center;
+  }
+  .service-page__adv-item {
+    padding: 3px 15px 6px;
+    .img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 9px;
+    }
+    p {
+      font-size: 8px;
+    }
+  }
+  .service-page__container h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
   .news-inner__block {
     flex-direction: column;
     align-items: flex-start;
@@ -865,6 +992,34 @@
 
 }
 @media screen and (max-width: 620px) {
+  .single-card .work  {
+    font-size: 6px;
+    span {
+      font-size: 8px;
+    }
+  }
+  .single-card .line a {
+    font-size: 6px;
+  }
+  .receptions__head {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .map-recep__cont {
+    height: 330px;
+    #store_map {
+
+    }
+  }
+  .receptions-select {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   .price-list .table_prise .content_row {
     display: flex;
   }
@@ -918,7 +1073,7 @@
   .price-list {
     width: 100%;
   }
-  .price-list .block_prise.hidden-btn #priceArea .table_prise {
+  .price-list .block_prise.hidden-btn div .table_prise {
     max-height: 250px;
   }
   .cards-section.js-section .cards-list {
@@ -957,6 +1112,12 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .service-page__head > .img {
+    height: 200px;
+  }
+  .service-page__head {
+    margin-bottom: 20px;
+  }
 
   .cards-slider--video .cards-slider__container .single-card {
     height: 200px;
@@ -1185,6 +1346,15 @@
   }
 }
 @media screen and (max-width: 525px) {
+  .service-page__text {
+    max-height: 96px;
+  }
+  .service-page__cont {
+    height: 200px;
+  }
+  .service-page__head > .img {
+    height: 162px;
+  }
   .cards-slider--video .cards-slider__container {
     .swiper-wrapper {
       flex-wrap: wrap;

@@ -245,6 +245,7 @@ function serviceSlider() {
                 // Optional parameters
                 loop: false,
                 slidesPerView: 3,
+                slidesPerGroup: 1,
                 speed: 600,
                 spaceBetween: 36,
 
@@ -273,6 +274,7 @@ function serviceSlider() {
                     // when window width is >= 480px
                     620: {
                         slidesPerView: 2,
+                        slidesPerGroup: 2,
                         spaceBetween: 10,
                     },
                 },
@@ -447,6 +449,10 @@ function goCardsSliderVideo() {
                 slidesPerGroup: 1,
                 // spaceBetween: 36,
                 slidesPerColumnFill: 'row',
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
                 pagination: false,
 
                 breakpoints: {
@@ -473,3 +479,103 @@ function goCardsSliderVideo() {
 }
 
 goCardsSliderVideo();
+
+
+let  cardsBeforeService1 = [...document.querySelectorAll('.service-page__cont')];
+function goCardsSliderBefore1() {
+    if (!cardsBeforeService1.length) {
+
+    } else {
+        cardsBeforeService1.forEach((sld) => {
+            let sldCont = sld.querySelector('.service-page__before');
+            let pagin = sld.querySelector('.dots');
+            let sldNext = sld.querySelector('.btn-slides--next');
+            let sldPrev = sld.querySelector('.btn-slides--prev');
+            const swiper2 = new Swiper(sldCont, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+                speed: 650,
+                autoplay: {
+                    delay: 4500,
+                },
+                navigation: {
+                    nextEl: sldNext,
+                    prevEl: sldPrev,
+                },
+                pagination: {
+                    el: pagin,
+                    type: 'bullets',
+                    bulletActiveClass: 'active',
+                    bulletClass: 'single-dot',
+                    bulletElement: 'div',
+                    clickable: true,
+                    currentClass: 'current',
+                    spaceBetween: 2,
+                },
+                breakpoints: {
+                    1023: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    767: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    525: {
+                        slidesPerView: 1,
+                    }
+                }
+
+
+
+            });
+        })
+    }
+}
+
+goCardsSliderBefore1();
+
+
+$( "input.search-field" ).autocomplete({
+    source: "/ajax.php?action=fast_search2&term=" + $("form[name='sform']").val(),
+    minLength: 3,
+    select: function( event, ui ) {
+        $("input.search-field").val(ui.item.value);
+        $("form[name='sform']").submit();
+    }
+});
+
+let btnOpenSerText = [...document.querySelectorAll('.service-page__text .open-ser-txt')];
+
+function openSerText() {
+        if (!btnOpenSerText.length) {
+
+        } else {
+            btnOpenSerText.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    btn.closest('.service-page__text').classList.toggle('visible');
+                })
+            })
+        }
+
+}
+
+openSerText();
+
+
+let subRecep = [...document.querySelectorAll('.reception__sel > span')];
+
+
+function openReception() {
+    if (subRecep.length) {
+        subRecep.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                btn.closest('.reception__sel').classList.toggle('open');
+            })
+        })
+    }
+
+}
+openReception();
