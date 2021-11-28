@@ -17148,38 +17148,6 @@ a.single-achiv {
   .desk-socials {
     margin-top: 7px; } }
 
-@media screen and (min-width: 971px) {
-  .cards-slider--video .cards-slider__container .single-card:nth-child(3) {
-    width: calc(304px * 2);
-    position: relative; }
-    .cards-slider--video .cards-slider__container .single-card:nth-child(3) .img {
-      height: 100%; }
-    .cards-slider--video .cards-slider__container .single-card:nth-child(3) .text {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(255, 255, 255, 0);
-      color: #fff;
-      z-index: 2; }
-      .cards-slider--video .cards-slider__container .single-card:nth-child(3) .text::before {
-        height: 126px;
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        background: -webkit-gradient(linear, left top, left bottom, from(rgba(66, 109, 169, 0)), to(#000000));
-        background: -o-linear-gradient(top, rgba(66, 109, 169, 0) 0%, #000000 100%);
-        background: linear-gradient(180deg, rgba(66, 109, 169, 0) 0%, #000000 100%);
-        display: inline-block;
-        content: ''; }
-      .cards-slider--video .cards-slider__container .single-card:nth-child(3) .text p {
-        color: #fff;
-        padding: 15px 19px;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box; } }
-
 @media screen and (max-width: 970px) {
   .cards-slider--video .cards-slider__container .single-card:first-child .text p, .cards-slider--video .cards-slider__container .single-card:nth-child(3) .text p {
     padding: 0; }

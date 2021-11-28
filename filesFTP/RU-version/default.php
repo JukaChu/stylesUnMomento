@@ -297,107 +297,46 @@
     <section class="cards-section">
         <div class="container">
             <div class="cards-section__container">
-                <h1 class="main-title">Новости и акции</h1>
                 <div class="cards-list">
-                    <?php
-                    $news = dbQuery("SELECT id,url,name, sdate, (SELECT id FROM images WHERE source = 1 AND parentid = content.id ORDER BY showorder DESC LIMIT 1) as imid
-            FROM content WHERE parentid = 2890 AND ispublish = 1 ORDER BY showorder ASC LIMIT 0,3");
-                    foreach ($news as $r) {
-                        $images = getImages($r["id"], 1);
+                    <a href="https://um.ppa.kiev.ua/novosti" class="single-card">
+                        <div class="img">
+                            <img class="lazyload" data-src="https://um.ppa.kiev.ua/images/thumbs/2932-0x274.jpeg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="tag">Новости</span>
+                            <p>Сеть UNMOMENTO работает в обычном режиме!</p>
 
-                        $mainImg = getImageById($r["imid"]);
-                        $img = getResizeImageById($mainImg["id"], "h", array("height" => 274), $mainImg["format"], $mainImg, 85);
+                            <div class="btn btn--blue">Детальней</div>
 
-                        $date_arr = split('[/.-]', $r["sdate"]);
-                        $date = $date_arr[2] . "." . $date_arr[1] . "." . $date_arr[0];
-                        ?>
-                        <a href="<?= $r["url"] ?>" class="single-card">
-                            <div class="img">
-                                <img class="lazyload" data-src="<?php echo (_SITE.$img) ?>" alt="">
-                            </div>
-                            <div class="text">
-                                <span class="date"><?= $date ?></span>
-                                <span class="tag">Новости</span>
-                                <p><?= $r["name"] ?></p>
+                        </div>
+                    </a>
+                    <a href="https://um.ppa.kiev.ua/sovety-ot-unmomento/" class="single-card">
+                        <div class="img">
+                            <img class="lazyload" data-src="https://um.ppa.kiev.ua/images/thumbs/901-0x300.jpeg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="tag">Советы</span>
+                            <p>"Почему и для чего?"  - разница между типами чистки в  UNMOMENTO</p>
 
-                                <div class="btn btn--blue">Подробнее</div>
+                            <div class="btn btn--blue">Детальней</div>
 
-                            </div>
-                        </a>
-                    <?php } ?>
+                        </div>
+                    </a>
+                    <a href="https://um.ppa.kiev.ua/loyalty/" class="single-card">
+                        <div class="img">
+                            <img class="lazyload" data-src="https://um.ppa.kiev.ua/images/thumbs/1078-0x274.jpeg" alt="">
+                        </div>
+                        <div class="text">
+                            <span class="tag">Программа лояльности</span>
+                            <p>Акция на чистку
+                                мебели</p>
 
-                </div>
+                            <div class="btn btn--blue">Детальней</div>
 
-                <a href="/novosti/" class="btn btn--big">Все новости</a>
-            </div>
-        </div>
-    </section>
-    <section class="cards-section">
-        <div class="container">
-            <div class="cards-section__container">
-                <h1 class="main-title">Программы лояльности</h1>
-                <div class="cards-list">
-
-                    <?php
-                    $promo = dbQuery("SELECT id, url FROM content WHERE parentid = 3078 AND ispublish = 1 ORDER BY id DESC LIMIT 0,3");
-                    foreach ($promo as $r) {
-
-                        $img_arr = getImages($r["id"], 1);
-                        $mainImg = $img_arr[0];
-                        $img = getResizeImageById($mainImg["id"], "h", array("height" => 274), $mainImg["format"], $mainImg, 85);
-                        ?>
-                        <a href="<?= $r["url"] ?>" class="single-card red">
-                            <div class="img">
-                                <img class="lazyload" data-src="<?php echo (_SITE.$img) ?>" alt="">
-                            </div>
-
-                        </a>
-                    <?php } ?>
+                        </div>
+                    </a>
 
                 </div>
-                <a href="/loyalty/" class="btn btn--big">все программы</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="cards-section">
-        <div class="container">
-            <div class="cards-section__container">
-                <h1 class="main-title">Советы от Unmomento</h1>
-                <div class="cards-list cards-list--double">
-
-                    <?php
-                    $advise = dbQuery("SELECT id, url, name, DATE_FORMAT(sdate,'%d.%m.%Y') as itemdate, (SELECT id FROM images WHERE source = 1 AND parentid = content.id ORDER BY showorder DESC LIMIT 1) as imid,info FROM content WHERE parentid = 3222 AND ispublish = 1 ORDER BY showorder LIMIT 0,2");
-                    foreach ($advise as $r) {
-                        $info = '<p>' . substr(strip_tags(html_entity_decode(htmlspecialchars_decode($r["info"]), ENT_QUOTES, "UTF-8")), 0, 512) . '</p>';
-
-                        $mainImg = getImageById($r["imid"]);
-
-                        if ($mainImg == "/templates/images/nofoto.jpg")
-                            $mainImg = "/images/no.png";
-
-                        $img = getResizeImageById($mainImg["id"], "h", array("height" => 300), $mainImg["format"], $mainImg, 80);
-                        ?>
-                        <a href="<?= $r["url"] ?>" class="single-card purple">
-                            <div class="img">
-                                <img class="lazyload" data-src="<?php echo (_SITE.$img) ?>" alt="">
-                            </div>
-                            <div class="text">
-                                <span class="tag">Советы</span>
-                                <p><?php echo $r["name"] ?></p>
-                                <span class="info">
-                                    <?php echo $info; ?>
-                                </span>
-
-                                <div class="btn btn--blue">Подробнее</div>
-
-                            </div>
-                        </a>
-                    <?php } ?>
-
-                </div>
-
-                <a href="/sovety-ot-unmomento/" class="btn btn--big">все советы</a>
             </div>
         </div>
     </section>
