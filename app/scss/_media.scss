@@ -1,3 +1,49 @@
+
+@media screen and (min-width: 813px) {
+  .company__text {
+    .img {
+      height: 320px;
+    }
+  }
+  .service-page__head {
+    & > .img {
+      height: 320px;
+    }
+  }
+  .company__news {
+    .single-card {
+      min-height: 145px;
+      .text {
+        p {
+          font-size: 16px;
+
+        }
+      }
+    }
+  }
+  .news-inner__main {
+    .img {
+      height: 320px;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .news__other-cont .single-card {
+    min-height: 320px;
+  }
+  .promot .news-inner__main .img {
+    height: 320px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    img {
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
 @media screen and (max-width: 1070px) {
   .cards-slider {
 
@@ -1348,22 +1394,22 @@
             left: 0;
             right: 0;
             background: rgba(255, 255, 255, 0);
-            color: #fff;
+            color: #000;
             z-index: 2;
             padding: 6px 10px;
             &::before {
-              height: 90px;
+              height: 120px;
               width: 100%;
               position: absolute;
               bottom: 0;
               left: 0;
               z-index: -1;
-              background: linear-gradient(180deg, rgba(66, 109, 169, 0) 0%, #000000 100%);
+              background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
               display: inline-block;
               content: '';
             }
             p {
-              color: #fff;
+              color: #000;
               padding:9px;
               font-size: 14px;
               box-sizing: border-box;

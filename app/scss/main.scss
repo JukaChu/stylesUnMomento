@@ -1610,7 +1610,7 @@ a.single-achiv {
           left: 0;
           right: 0;
           background: rgba(255, 255, 255, 0);
-          color: #fff;
+          color: #000;
           z-index: 2;
           &::before {
             height: 126px;
@@ -1619,12 +1619,12 @@ a.single-achiv {
             bottom: 0;
             left: 0;
             z-index: -1;
-            background: linear-gradient(180deg, rgba(66, 109, 169, 0) 0%, #000000 100%);
+            background: linear-gradient(180deg, rgba(66, 109, 169, 0) 0%, #fff 100%);
             display: inline-block;
             content: '';
           }
           p {
-            color: #fff;
+            color: #000;
             padding: 15px 19px;
             box-sizing: border-box;
           }
@@ -2696,7 +2696,7 @@ a.single-achiv {
   justify-content: flex-start;
   .img {
     width: 100%;
-    height: auto;
+    height: 302px;
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 30px;
@@ -2706,8 +2706,8 @@ a.single-achiv {
     justify-content: center;
     img {
       width: 100%;
-      height: auto;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
@@ -2720,8 +2720,8 @@ a.single-achiv {
   justify-content: flex-start;
 }
 .company-column {
-  width: calc(50% - 25px);
-  margin-right: 50px;
+  width: calc(50% - 30px);
+  margin-right: 60px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
