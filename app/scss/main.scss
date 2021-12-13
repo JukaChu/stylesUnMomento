@@ -1643,18 +1643,24 @@ a.single-achiv {
   padding: 3px;
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0);
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   border-radius: 3px;
   box-shadow: none;
   cursor: pointer;
   svg {
     path {
       stroke:#00B9ED;
+      transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     }
   }
   &:hover {
-    box-shadow: 3px 3px 8px 1px rgba(0, 185, 237, 0.25);
-    transition: border 0.3s ease, box-shadow 0.3s ease;
+    transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    svg {
+      path {
+        filter: drop-shadow(1px 1px 4px rgba(0, 185, 237, 0.65));
+        transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      }
+    }
 
   }
   &--next {

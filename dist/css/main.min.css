@@ -14633,25 +14633,36 @@ a.single-achiv {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0);
-  -webkit-transition: border 0.3s ease, -webkit-box-shadow 0.3s ease;
-  transition: border 0.3s ease, -webkit-box-shadow 0.3s ease;
-  -o-transition: border 0.3s ease, box-shadow 0.3s ease;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-  transition: border 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -webkit-transition: border 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease;
+  transition: border 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease;
+  -o-transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease;
   border-radius: 3px;
   -webkit-box-shadow: none;
           box-shadow: none;
   cursor: pointer; }
   .btn-slides svg path {
-    stroke: #00B9ED; }
+    stroke: #00B9ED;
+    -webkit-transition: border 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease;
+    transition: border 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease;
+    -o-transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease; }
   .btn-slides:hover {
-    -webkit-box-shadow: 3px 3px 8px 1px rgba(0, 185, 237, 0.25);
-            box-shadow: 3px 3px 8px 1px rgba(0, 185, 237, 0.25);
-    -webkit-transition: border 0.3s ease, -webkit-box-shadow 0.3s ease;
-    transition: border 0.3s ease, -webkit-box-shadow 0.3s ease;
-    -o-transition: border 0.3s ease, box-shadow 0.3s ease;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-    transition: border 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease; }
+    -webkit-transition: border 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease;
+    transition: border 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease;
+    -o-transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease; }
+    .btn-slides:hover svg path {
+      -webkit-filter: drop-shadow(1px 1px 4px rgba(0, 185, 237, 0.65));
+              filter: drop-shadow(1px 1px 4px rgba(0, 185, 237, 0.65));
+      -webkit-transition: border 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease;
+      transition: border 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease;
+      -o-transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      transition: border 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, -webkit-box-shadow 0.3s ease, -webkit-filter 0.3s ease; }
   .btn-slides--next svg {
     -webkit-transform-origin: 50% 50%;
         -ms-transform-origin: 50% 50%;
