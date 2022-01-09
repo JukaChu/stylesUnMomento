@@ -325,6 +325,33 @@ function priceSlider() {
 
 priceSlider();
 
+
+let corpService = [...document.querySelectorAll('.service-slider')];
+
+function corpSlider() {
+    if (!corpService.length) {
+
+    } else {
+        corpService.forEach((sld) => {
+            const swiper2 = new Swiper(sld, {
+                // Optional parameters
+                loop: false,
+                slidesPerView: 1,
+                speed: 600,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 5000,
+                    pauseOnMouseEnter: true,
+                },
+                pagination: false,
+
+            });
+        })
+    }
+}
+
+corpSlider();
+
 //sliders
 
 

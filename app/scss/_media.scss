@@ -684,10 +684,39 @@
   .cards-list.cards-list--double .single-card .img {
     width: 130px;
   }
-
-
+  .fran-form .container_form .btn {
+    font-size: 12px;
+  }
+  .service-page__cont.desk-only {
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
+  .company-text__column {
+    column-gap: 20px;
+  }
+  .company-text__column p {
+    font-size: 10px;
+  }
+  .company-text__column strong {
+    font-size: 12px;
+    margin-top: 14px;
+  }
+  .company-text__column span {
+    font-size: 10px;
+    strong {
+      font-size: 10px;
+    }
+  }
+  .company-text__column ul li {
+    font-size: 10px;
+    padding-left: 10px;
+    &::before {
+      top: 6px;
+      left: 4px;
+    }
+  }
+
   .service-page__text {
     max-height: 180px;
     padding-bottom: 16px;
