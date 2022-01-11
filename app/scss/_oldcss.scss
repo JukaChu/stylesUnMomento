@@ -9293,7 +9293,7 @@ a.show-more-price:hover::before {
     width: 0;
   }
   100% {
-    width: calc(100% - 17px);
+    width: calc(100% - 34px);
   }
 }
 
@@ -11843,7 +11843,7 @@ a.show-more-price:hover::before {
     margin: 0;
   }
   .col-circle .line {
-    display: none;
+    //display: none;
   }
   .dostavka-price-col {
     width: 50%;
@@ -12703,7 +12703,7 @@ a.show-more-price:hover::before {
     padding-bottom: 0;
   }
   .long-line-wrap {
-    display: none;
+    //display: none;
   }
   .circles-cont .col-33 {
     width: 50%;
