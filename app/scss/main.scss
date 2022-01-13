@@ -3895,4 +3895,39 @@ a.single-achiv {
 .aside-form-inner {
   height: auto;
 }
+
+.desk-buttons__list {
+  .desk-socials {
+    width: auto;
+    margin-top: 0;
+    margin-right: 36px;
+  }
+}
+.call-back-frm {
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: none;
+  &.open {
+    display: flex;
+  }
+  .fran-form {
+    width: 100%;
+    max-width: 286px;
+    margin-top: 0;
+  }
+}
+.service-page__container {
+  &--cour {
+    .service-page__delivery {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    .service-page__head {
+      display: none;
+    }
+  }
+}
 @import "media";
