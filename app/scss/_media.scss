@@ -931,6 +931,16 @@
 }
 
 @media screen and (max-width: 767px) {
+  .service-page__delivery-content {
+    &.service-page__delivery-content--wrap {
+      flex-wrap: wrap;
+      .service-slider {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+  }
 
   .service-page__container {
     &--cour {
@@ -1098,6 +1108,10 @@
 
     p {
       font-size: 8px;
+    }
+    small {
+      font-size: 8px;
+      margin-top: 0;
     }
   }
   .service-page__container h2 {
@@ -1483,6 +1497,20 @@
 }
 
 @media screen and (max-width: 600px) {
+  .service-page {
+    margin-top: 20px;
+  }
+  .service-page__adv-list {
+    &.service-page__adv-list {
+      .service-page__adv-item {
+        padding: 3px 20px 6px;
+        width: 50%;
+      }
+    }
+  }
+  .table_prise .check_block .content_col .square_check {
+    top: 22px;
+  }
   .desk-buttons__list .desk-socials {
     order: 2;
     margin-right: 0;

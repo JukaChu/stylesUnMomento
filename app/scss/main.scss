@@ -3093,6 +3093,15 @@ a.single-achiv {
     text-align: center;
     color: #000000;
   }
+  small {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 135%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 5px;
+  }
 }
 
 .service-page__price .price-list .block_prise {
@@ -3930,4 +3939,6 @@ a.single-achiv {
     }
   }
 }
+
+
 @import "media";

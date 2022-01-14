@@ -16386,6 +16386,14 @@ a.single-achiv {
     line-height: 135%;
     text-align: center;
     color: #000000; }
+  .service-page__adv-item small {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 135%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 5px; }
 
 .service-page__price .price-list .block_prise.hidden-btn div .table_prise {
   max-height: 329px; }
@@ -18274,6 +18282,13 @@ a.single-achiv {
       line-height: 1.25; } }
 
 @media screen and (max-width: 767px) {
+  .service-page__delivery-content.service-page__delivery-content--wrap {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .service-page__delivery-content.service-page__delivery-content--wrap .service-slider {
+      width: 100%;
+      margin-bottom: 20px; }
   .service-page__container--cour .service-page__head {
     display: -webkit-box;
     display: -webkit-flex;
@@ -18413,6 +18428,9 @@ a.single-achiv {
       margin-bottom: 9px; }
     .service-page__adv-item p {
       font-size: 8px; }
+    .service-page__adv-item small {
+      font-size: 8px;
+      margin-top: 0; }
   .service-page__container h2 {
     font-size: 14px;
     margin-bottom: 10px; }
@@ -18764,6 +18782,13 @@ a.single-achiv {
       height: calc((100% - 10px) / 2); } }
 
 @media screen and (max-width: 600px) {
+  .service-page {
+    margin-top: 20px; }
+  .service-page__adv-list.service-page__adv-list .service-page__adv-item {
+    padding: 3px 20px 6px;
+    width: 50%; }
+  .table_prise .check_block .content_col .square_check {
+    top: 22px; }
   .desk-buttons__list .desk-socials {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
