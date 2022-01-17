@@ -1,50 +1,33 @@
 <?php
 
 $arr = dbQuery("SELECT id,url,name,(SELECT id FROM images WHERE source = 1 AND parentid = content.id AND is_main = 1) as imid,(SELECT format FROM images WHERE source = 1 AND parentid = content.id AND is_main = 1) as imformat
-FROM content WHERE parentid = 3166 AND ispublish = 1 ORDER BY showorder"); ?>
-
+FROM content WHERE parentid = $head[id] AND ispublish = 1 ORDER BY showorder"); ?>
 <main>
     <section class="all-cards">
         <div class="container">
-            <h1 class="main-title">Акції</h1>
+            <h1 class="main-title">Програми лояльності</h1>
 
             <div class="cards-slider">
                 <div class="cards-slider__container swiper-container">
                     <div class="swiper-wrapper">
-                        <?
-                        $i = 0;
-                        foreach($arr as $r)
-                        {
-                            $i++;
-                            $images = getImages($r["id"],1);
-                            $img =  getImageById($r["imid"]);
-                            if($img == "/templates/images/nofoto.jpg")
-                            {
-                                $img = "/images/no.png";
-                            }
-                            if(count($images) > 1)
-                            {
-                                $img = $images[1];
-                            }
+                        <?php $sql = dbQuery("SELECT id,url,name,(SELECT id FROM images WHERE source = 1 AND parentid = content.id AND is_main = 1) as imid,(SELECT format FROM images WHERE source = 1 AND parentid = content.id AND is_main = 1) as imformat FROM content WHERE parentid = '$head[id]' AND ispublish = 1 ORDER BY id DESC");
+                        foreach($sql as $item) {
+                            $img = getImageById($item["imid"]);
                             ?>
 
-                            <a href="/<?= $r["url"] ?>" class="single-card red swiper-slide">
+                            <a href="/<?=$item["url"]?>/" class="single-card green swiper-slide">
                                 <div class="img">
-                                    <img class="lazyload" data-src="<?php echo _SITE; ?>images/files/<?php echo $img["image"] ?>" alt="">
+                                    <img class="lazyload" data-src="<?php echo _SITE; ?>images/files/<?=$img["image"]?>" alt="">
                                 </div>
                                 <div class="text">
-                                    <span class="tag">Акція</span>
-                                    <p><?= $r["name"] ?></p>
+                                    <span class="tag">Програма лояльності</span>
+                                    <p><?= $item["name"] ?></p>
 
                                     <div class="btn btn--blue">докладніше</div>
 
                                 </div>
                             </a>
-
-                            <?
-                            if($i == 3) { $i = 0; }
-                        }
-                        ?>
+                        <?php } ?>
 
 
 
@@ -71,4 +54,3 @@ FROM content WHERE parentid = 3166 AND ispublish = 1 ORDER BY showorder"); ?>
 
     <?php include 'desk-buttons-nav.php'; ?>
 </main>
-

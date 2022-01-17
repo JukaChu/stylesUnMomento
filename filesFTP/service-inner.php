@@ -1,10 +1,22 @@
-
 <?php
 global $h1;
 $detect = new Mobile_Detect;
 ?>
 <?php if ((int)$head["id"] == 1713 || (int)$head["id"] == 142 /*|| (int)$head["id"] == 147*/) { ?>
-
+    <div class="fran-form">
+        <div class="container_feedback um-fran-form " id="orderSend">
+            <div class="title">Зателефонуйте мені</div>
+            <div class="container_form clear_after">
+                <iframe id="f_rframe" name="f_rframe" style="display:none;" ></iframe>
+                <form method="post" target="f_rframe"  action="/request.php?action=add&id=10">
+                    <div class="input"><input required name="f90" type="name" id="f90"   value="" placeholder="Ім'я"></div>
+                    <div class="input"><input required name="f50" type="name"    value="" placeholder="Телефон"></div>
+                    <input type="hidden" name="f51" id="f51" value="Курьер">
+                    <input type="submit"  class="btn btn--blue btn--big" onclick="fbq('track', 'SubmitApplication');" name="" value="Відправити">
+                </form>
+            </div>
+        </div>
+    </div>
 <main class="service-inner">
 
             <?php if ($head["id"] == 1713) {

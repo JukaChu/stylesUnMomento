@@ -24,7 +24,7 @@ else
 {
 	if($head["path"] == "")
 	{
-		?><div class="container_news def"><div class="main_content block_margin clear_after">	<div class="block_prise news_inner  <?php echo $head["id"] === '2973'?'editor-seo sovety-seo':''; ?>"><?
+		?><main><section class="textual-block">	<div class="container"><div class="<?php echo $head["id"] === '2973'?'editor-seo sovety-seo':''; ?>"><?
 	}
 
 		if($head["hide_content"] == "0")
@@ -34,6 +34,7 @@ else
 		}
 		if($head["path"] != "" && file_exists(_DIR.$head["path"]))
 		{
+
 			include(_DIR.$head["path"]);
 
 		}
@@ -43,6 +44,6 @@ else
 		}
 	if($head["path"] == "")
 	{
-		?></div></div></div><?
+        ?></div></div></section></main><?
 	}
 }

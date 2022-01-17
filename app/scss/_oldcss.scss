@@ -8278,17 +8278,7 @@ a.show-more-price:hover::before {
   margin-bottom: 15px;
 }
 
-.styled-form input[type="submit"] {
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 20px;
-  background-color: #00aa4f;
-  color: #fff;
 
-  cursor: pointer;
-  transition: .2s background;
-}
 
 .styled-form .form-label {
   font-size: 12px;
@@ -10437,26 +10427,8 @@ a.show-more-price:hover::before {
   border-color: #735FA4;
 }
 
-.col-callback-form .styled-form input[type="submit"] {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 45px;
-  line-height: 45px;
 
-  font-weight: bold;
-  font-size: 18px;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  color: #fff;
-  text-align: center;
-  display: block;
-}
 
-.col-callback-form .styled-form input[type="submit"]:hover {
-  opacity: 0.8;
-}
 
 .styled-form.violet-form input[type="submit"] {
   background-color: #735FA4;
