@@ -105,7 +105,7 @@
                 <div class="service-page__adv">
                     <h2>Як працює сервіс</h2>
                     <div class="service-page__adv-list service-page__adv-list--double">
-                        <div class="service-page__adv-item">
+                        <div class="service-page__adv-item showPopup" data-show="dostavkaPopup">
                             <div class="img">
                                 <img src="<?php echo _TEMPL . 'build/img/u-del-1.png' ?>" alt="">
                             </div>
@@ -445,4 +445,88 @@
             }
         }
         controlMdlCallBack();
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.aside-form-subtitle').html('<?php echo $head['name']; ?>');
+            $('#f44, #lf44, #f59, #f51').val('<?php echo $head['name']; ?>');
+            var summ = 0;
+            $('.chooseService').click(function(e){
+                e.preventDefault();
+                var clickedItem = $(this),
+                    blockPrice = +$(this).attr('data-price');
+                if(clickedItem.hasClass('active')){summ-=blockPrice;}
+                else{summ+=blockPrice;}
+                clickedItem.toggleClass('active');
+                $("#countPrice").html(summ);
+            });
+            $("#phone_").keyup(function(e){
+                this.value = this.value.replace(/[^()0-9\.-]/g, '');
+            });
+            $('#SentOrder').click(function() {
+                var phone = $('#o_phone_').val();
+                var email = $('#o_email_').val();
+                var price = $('#countPrice').text();
+                var OrderArray = new Array();
+                $(".chooseService.active").each(function () {
+                    OrderArray.push({
+                        tovar: $(this).attr("data-tovar"),
+                        vid: $(this).attr("vid-uslug"),
+                        price: parseInt($(this).attr("data-price"))
+                    });
+                });
+                var re = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
+                if (OrderArray.length >0) {
+                    if (phone && email && re.test(email)) {
+                        $.ajax({
+                            'type': 'POST',
+                            'url': "/inc/sentorder.php",
+                            'data': {
+                                'phone': phone,
+                                'email': email,
+                                'price': price,
+                                'orders': OrderArray
+                            },
+                            'success': function (html) {
+
+                                $('#message').dialog({
+                                    modal: true,
+                                    title: "Сообщение",
+                                    open: function () {
+                                        var text = '<p>' + html + '</p>';
+                                        $(this).html(text);
+                                    },
+                                    buttons: {
+                                        Ok: function () {
+                                            $(this).dialog("close");
+                                        }
+                                    }
+                                });
+                                $('#phone').val('');
+                                $('#email').val('');
+                            },
+                            'error': function (jqXHR, textStatus, errorThrown) {
+                                console.log(jqXHR);
+                                alert("AJAX Error!", "Error  SORRY (Error: " + textStatus + ", " + errorThrown + ")");
+                            }
+
+                        });
+                    }
+                } else {
+                    $('#message').dialog({
+                        modal: true,
+                        title: "Сообщение",
+                        open: function () {
+                            var text = '<p>' + 'Выберете услугу доставки' + '</p>';
+                            $(this).html(text);
+                        },
+                        buttons: {
+                            Ok: function () {
+                                $(this).dialog("close");
+                            }
+                        }
+                    });
+                }
+            });
+        });
     </script>

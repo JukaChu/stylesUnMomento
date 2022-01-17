@@ -4180,14 +4180,16 @@ body .ui-front {
 .fast-order-text {
   position: absolute;
   top: 50%;
-  left: -72px;
-  margin-top: -27px;
-  -ms-transform: rotate(-90deg);
-      transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+      -ms-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
   white-space: nowrap;
   height: 50px;
-  line-height: 50px; }
+  line-height: 50px;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; }
 
 .aside-form-wrap.formClose .fast-order-btn {
   opacity: 1;
@@ -6825,17 +6827,6 @@ a.show-more-price:hover::before {
 
 .um-order-form-wrap .input, .um-styled-form .input {
   margin-bottom: 10px; }
-
-.um-order-form-wrap input:not([type="submit"]), .um-styled-form input:not([type="submit"]) {
-  width: 100%;
-  height: 45px;
-  border: 1px solid #1b1b1b;
-  font-size: 14px;
-  color: #1b1b1b;
-  padding: 0 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -moz-box-sizing: border-box; }
 
 .block-link {
   position: absolute;
@@ -12420,13 +12411,6 @@ ul.news_social_buttons li.social_button a div.social_button_tg {
 .dostavka-service .circles-cont .inner-circle {
   cursor: pointer; }
 
-.dostavkaPopup .um-order-form-wrap input:not([type=submit]), .dostavkaPopup .um-styled-form input:not([type=submit]), .dostavkaPopup .um-styled-form textarea {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border: 1px solid #00aa4f;
-  margin-bottom: 10px; }
-
 .callback-popup.dostavkaPopup {
   width: 556px;
   height: auto;
@@ -12443,45 +12427,12 @@ ul.news_social_buttons li.social_button a div.social_button_tg {
 .callback-popup.dostavkaPopup form {
   padding: 7px 0; }
 
-.callback-popup.dostavkaPopup form input, .callback-popup.dostavkaPopup form textarea {
-  background: #fff;
-  padding: 0 20px;
-  height: 45px;
-  line-height: 14px;
-  border: 1px solid #00aa4f;
-  font-size: 14px;
-  color: #262626; }
-
 .callback-popup.dostavkaPopup form textarea {
   width: 100%;
   height: 90px;
   outline: none;
   padding: 10px;
   font-family: sans-serif; }
-
-.callback-popup.dostavkaPopup .title {
-  text-transform: none;
-  font-size: 24px;
-  color: #00aa4f;
-  line-height: 34px;
-  margin-bottom: 8px; }
-
-.callback-popup.dostavkaPopup form input[type=submit] {
-  width: 100%;
-  font-size: 16px;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 20px;
-  background-color: #00aa4f;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: .2s background;
-  -o-transition: .2s background;
-  transition: .2s background; }
-
-.callback-popup.dostavkaPopup form input[type=submit]:hover {
-  background-color: #f55b08;
-  border-color: #f55b08; }
 
 .news_social_buttons, #order_div .news_social_buttons, .callback-popup.dostavkaPopup .news_social_buttons {
   width: 300px;
@@ -17835,15 +17786,15 @@ section.not_page {
   .service-page.service-call-cour .fran-form {
     margin-bottom: 30px; }
 
-.fran-form .styled-form .container_fran {
+.fran-form .styled-form .container_fran, .popup .styled-form .container_fran {
   padding: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.fran-form .styled-form .checkbox_block {
+.fran-form .styled-form .checkbox_block, .popup .styled-form .checkbox_block {
   position: relative; }
 
-.fran-form .styled-form .form_row {
+.fran-form .styled-form .form_row, .popup .styled-form .form_row {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -17858,13 +17809,13 @@ section.not_page {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 14px; }
-  .fran-form .styled-form .form_row > .form_input {
+  .fran-form .styled-form .form_row > .form_input, .popup .styled-form .form_row > .form_input {
     width: 50%; }
-  .fran-form .styled-form .form_row > .date_col {
+  .fran-form .styled-form .form_row > .date_col, .popup .styled-form .form_row > .date_col {
     width: 50%; }
-  .fran-form .styled-form .form_row:last-child {
+  .fran-form .styled-form .form_row:last-child, .popup .styled-form .form_row:last-child {
     margin-bottom: 0; }
-  .fran-form .styled-form .form_row input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), .fran-form .styled-form .form_row .select-btn {
+  .fran-form .styled-form .form_row input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), .fran-form .styled-form .form_row .select-btn, .popup .styled-form .form_row input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), .popup .styled-form .form_row .select-btn {
     width: 100%;
     border: 0.5px solid #00B9ED;
     -webkit-box-sizing: border-box;
@@ -17877,28 +17828,28 @@ section.not_page {
     line-height: 150%;
     color: black; }
 
-.fran-form .styled-form .checkmark::before {
+.fran-form .styled-form .checkmark::before, .popup .styled-form .checkmark::before {
   content: none; }
 
-.fran-form .styled-form .date_col {
+.fran-form .styled-form .date_col, .popup .styled-form .date_col {
   width: 100%; }
 
-.fran-form .styled-form .checkbox_block {
+.fran-form .styled-form .checkbox_block, .popup .styled-form .checkbox_block {
   margin-top: 6px; }
 
-.fran-form .styled-form .checkbox_block input[type="checkbox"]:checked ~ .checkmark {
+.fran-form .styled-form .checkbox_block input[type="checkbox"]:checked ~ .checkmark, .popup .styled-form .checkbox_block input[type="checkbox"]:checked ~ .checkmark {
   background: #fff; }
 
-.fran-form .styled-form .checkmark {
+.fran-form .styled-form .checkmark, .popup .styled-form .checkmark {
   border: 1px solid #00B9ED;
   border-radius: 2px;
   background: #00B9ED; }
 
-.fran-form .styled-form .checkmark::after {
+.fran-form .styled-form .checkmark::after, .popup .styled-form .checkmark::after {
   border-bottom: 1px solid #00B9ED;
   border-left: 1px solid #00B9ED; }
 
-.fran-form .styled-form .form_label {
+.fran-form .styled-form .form_label, .popup .styled-form .form_label {
   width: 50%;
   font-size: 14px;
   line-height: 1.2;
@@ -17906,11 +17857,81 @@ section.not_page {
   padding-right: 12px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
-  .fran-form .styled-form .form_label .blue_label, .fran-form .styled-form .form_label .green_label {
+  .fran-form .styled-form .form_label .blue_label, .fran-form .styled-form .form_label .green_label, .popup .styled-form .form_label .blue_label, .popup .styled-form .form_label .green_label {
     background: #00B9ED; }
 
-.fran-form .styled-form .form_input {
+.fran-form .styled-form .form_input, .popup .styled-form .form_input {
   width: 100%; }
+
+.showPopup {
+  cursor: pointer; }
+
+.popup .um-styled-form .form_row {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 14px; }
+  .popup .um-styled-form .form_row .form_label {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 500;
+    padding-right: 12px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .popup .um-styled-form .form_row .form_label .blue_label, .popup .um-styled-form .form_row .form_label .green_label {
+      background: #00B9ED; }
+  .popup .um-styled-form .form_row > .form_input {
+    width: 100%; }
+  .popup .um-styled-form .form_row > .date_col {
+    width: 100%; }
+  .popup .um-styled-form .form_row:last-child {
+    margin-bottom: 0; }
+  .popup .um-styled-form .form_row input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]), .popup .um-styled-form .form_row .select-btn, .popup .um-styled-form .form_row textarea {
+    width: 100%;
+    border: 0.5px solid #00B9ED;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 6px 11px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: black; }
+  .popup .um-styled-form .form_row textarea {
+    height: 60px; }
+
+.callback-popup.dostavkaPopup .title {
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 15px;
+  border-bottom: 0.25px solid rgba(0, 0, 0, 0.25);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  margin-top: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #000000; }
 
 @media screen and (min-width: 813px) {
   .company__text .img {

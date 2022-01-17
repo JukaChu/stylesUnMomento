@@ -1,19 +1,17 @@
-<?php include 'mob_header_buttons.php'; ?>
+
 <?php 
 global $h1;
 $detect = new Mobile_Detect;
 ?>
 <?php if((int)$head["id"] == 1713 || (int)$head["id"] == 142 /*|| ( (int)$head["id"] == 147 && isset($_GET['dev']) )*/ ){ ?>
 
-<div class="container_sevise inner sideheight">
-    <div class="main_content block_margin clear_after sideheight">
+<main class="service-inner">
     <?php 
     if($head["id"] == 1713) { include 'service_corporative.php'; } 
     else if($head["id"] == 142){ include 'service_dostavka.php'; }
     /*else if($head["id"] == 147){ include 'service_corporative_2.php'; }*/
     ?>
-    </div>
-</div>
+</main>
 <?php }  else { ?>
 
     <main class="service-inner">

@@ -4785,13 +4785,13 @@ body .ui-front {
 .fast-order-text {
   position: absolute;
   top: 50%;
-  left: -72px;
-  margin-top: -27px;
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+
   white-space: nowrap;
   height: 50px;
   line-height: 50px;
+  transform-origin: 50% 50%;
 }
 
 .aside-form-wrap.formClose .fast-order-btn {
@@ -7928,16 +7928,7 @@ a.show-more-price:hover::before {
   margin-bottom: 10px;
 }
 
-.um-order-form-wrap input:not([type="submit"]), .um-styled-form input:not([type="submit"]) {
-  width: 100%;
-  height: 45px;
-  border: 1px solid #1b1b1b;
-  font-size: 14px;
-  color: #1b1b1b;
-  padding: 0 20px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
+
 
 .block-link {
   position: absolute;
@@ -14760,12 +14751,7 @@ ul.news_social_buttons li.social_button a div.social_button_tg {
   cursor: pointer;
 }
 
-.dostavkaPopup .um-order-form-wrap input:not([type=submit]), .dostavkaPopup .um-styled-form input:not([type=submit]), .dostavkaPopup .um-styled-form textarea {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border: 1px solid #00aa4f;
-  margin-bottom: 10px;
-}
+
 
 .callback-popup.dostavkaPopup {
   width: 556px;
@@ -14784,15 +14770,6 @@ ul.news_social_buttons li.social_button a div.social_button_tg {
   padding: 7px 0;
 }
 
-.callback-popup.dostavkaPopup form input, .callback-popup.dostavkaPopup form textarea {
-  background: #fff;
-  padding: 0 20px;
-  height: 45px;
-  line-height: 14px;
-  border: 1px solid #00aa4f;
-  font-size: 14px;
-  color: #262626;
-}
 
 .callback-popup.dostavkaPopup form textarea {
   width: 100%;
@@ -14802,31 +14779,9 @@ ul.news_social_buttons li.social_button a div.social_button_tg {
   font-family: sans-serif;
 }
 
-.callback-popup.dostavkaPopup .title {
-  text-transform: none;
-  font-size: 24px;
-  color: #00aa4f;
-  line-height: 34px;
-  margin-bottom: 8px;
-}
 
-.callback-popup.dostavkaPopup form input[type=submit] {
-  width: 100%;
-  font-size: 16px;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 20px;
-  background-color: #00aa4f;
-  color: #fff;
 
-  cursor: pointer;
-  transition: .2s background;
-}
 
-.callback-popup.dostavkaPopup form input[type=submit]:hover {
-  background-color: #f55b08;
-  border-color: #f55b08;
-}
 
 .news_social_buttons, #order_div .news_social_buttons, .callback-popup.dostavkaPopup .news_social_buttons {
   width: 300px;

@@ -266,11 +266,19 @@ else if ($head['parentid'] == '2890' || $head['parentid'] == '3078'){ ?>
                     </div>
                 </div>
                 <div class="aside-formrow">
-                    <input class="btn btn--blue btn--big" id="submit_order_delivery" type="submit" value="НАДІСЛАТИ">
+                    <input id="submit_order_delivery" type="submit" value="НАДІСЛАТИ">
                 </div>
             </form>
             <div class="ajaxMessage"></div>
-
+            <ul class="news_social_buttons">
+                <li class="social_button social_button_fb"><a taget="_blank" href="https://m.me/momento.un?ref=UNMOMENTO"><div class="social_button_fb"></div></a></li>
+                <li class="social_button social_button_vb"><a taget="_blank" href="viber://pa?chatURI=unmomentobot&context=ml1"><div class="social_button_vb"></div></a></li>
+                <li class="social_button social_button_tg"><a taget="_blank" href="https://t.me/unmomento_bot"><div  class="social_button_tg"></div></a></li>
+            </ul>
+            <ul class="news_social_buttons">
+                <li><a href="https://play.google.com/store/apps/details?id=ru.agbis.Unmomento"><i class="fa fa-android"></i></a></li>
+                <li><a href="https://apps.apple.com/ua/app/unmomento/id1491483430?l=ru"><i class="fa fa-apple"></i></a></li>
+            </ul>
         </div>
     </div>
     <?php } ?>
