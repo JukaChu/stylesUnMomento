@@ -21,7 +21,7 @@
                         <?php } ?>
                         <div class="company-row">
 
-                            <div class="company-text__column">
+                            <div class="company-text__column <?php if($head["id"] == 2977) {} else { echo 'company-text__column--single'; }?>">
                                 <?=htmlspecialchars_decode($head["info"],ENT_QUOTES)?>
                             </div>
 

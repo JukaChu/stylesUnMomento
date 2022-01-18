@@ -13887,6 +13887,11 @@ a.single-achiv {
     width: calc((100% / 3) - (72px / 3)); }
   .cards-list + .btn {
     margin-top: 20px; }
+  .cards-list.cards-list--table {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    row-gap: 20px; }
   .cards-list.cards-list--double .single-card {
     width: calc(50% - 18px);
     -webkit-box-orient: horizontal;
@@ -14902,9 +14907,14 @@ a.single-achiv {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .news-inner__main .img img {
+    .news-inner__main .img img, .news-inner__main .img iframe {
       width: 100%;
       height: auto;
+      -o-object-fit: contain;
+         object-fit: contain; }
+    .news-inner__main .img iframe {
+      width: 100% !important;
+      height: 100%;
       -o-object-fit: contain;
          object-fit: contain; }
   .news-inner__main h1 {
@@ -14959,6 +14969,8 @@ a.single-achiv {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
+    .news-inner__main .text .desc_text {
+      padding: 0 !important; }
     .news-inner__main .text iframe {
       margin: 20px 0; }
     .news-inner__main .text p {
@@ -16785,6 +16797,10 @@ a.single-achiv {
   -webkit-column-gap: 8%;
      -moz-column-gap: 8%;
           column-gap: 8%; }
+  .company-text__column.company-text__column--single {
+    -webkit-columns: 1;
+       -moz-columns: 1;
+            columns: 1; }
   .company-text__column p {
     font-weight: normal;
     font-size: 12px;
@@ -17932,6 +17948,22 @@ section.not_page {
   line-height: 150%;
   text-align: center;
   color: #000000; }
+
+.cards-slider--video .cards-slider__container .single-card:not(:first-child) .img {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .cards-slider--video .cards-slider__container .single-card:not(:first-child) .img img {
+    height: 140%; }
 
 @media screen and (min-width: 813px) {
   .company__text .img {

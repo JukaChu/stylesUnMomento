@@ -18,8 +18,9 @@
 
                     ?>
                     <div class="img">
-                        <img src="<?php echo _SITE ?>images/files/<?php echo $img1
-                        ["image"] ?>" alt="">
+                        <?php if( /*strlen($head['preview']) === 28*/ $code ) {?>
+                            <iframe width="100%" height="450" src="https://www.youtube.com/embed/<?php echo $code; ?>" frameborder="0" allowfullscreen></iframe>
+                        <?php } ?>
                     </div>
 
                     <div class="tag">Видео</div>
@@ -29,9 +30,7 @@
                         <?= htmlspecialchars_decode($head["info"]) ?>
 
                         <?php echo htmlspecialchars_decode($head["info"]) ?>
-                        <?php if( /*strlen($head['preview']) === 28*/ $code ) {?>
-                            <iframe width="100%" height="450" src="https://www.youtube.com/embed/<?php echo $code; ?>" frameborder="0" allowfullscreen></iframe>
-                        <?php } ?>
+
                         <?php
                         if($head[id]==3090){ ?>
                             <div class="forms_registration new_forms">
