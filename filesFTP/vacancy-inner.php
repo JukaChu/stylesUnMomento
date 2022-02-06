@@ -27,7 +27,7 @@
                         <?php echo htmlspecialchars_decode($head['info2'], ENT_QUOTES); ?>
                         <?=htmlspecialchars_decode($head["additional"],ENT_QUOTES)?>
                     </div>
-                    <div class="form-call-back">
+                    <div class="form-call-back" style="display: none">
                         <div class="fran-form">
                             <div class="container_feedback um-fran-form " id="orderSend">
                                 <div class="title">Зателефонуйте мені</div>
