@@ -12852,7 +12852,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
     background: url("../img/ph-ic-1.svg") no-repeat center/100%; }
   .header-top__phones a {
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 12px;
     line-height: 150%;
     color: #000000;
@@ -13309,7 +13309,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
       .header-bottom__menu > ul > li > a, .header-bottom__menu > ul > li > span {
         display: inline-block;
         font-style: normal;
-        font-weight: 500;
+        font-weight: normal;
         padding: 0;
         font-size: 12px;
         line-height: 150%;
@@ -13521,7 +13521,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
       height: 100%; }
   .spec-services__single p {
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 12px;
     line-height: 125%;
     color: #000000; }
@@ -13758,7 +13758,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
       color: #000000; }
     .single-achiv .text p {
       font-style: normal;
-      font-weight: 500;
+      font-weight: normal;
       font-size: 16px;
       line-height: 125%;
       color: #000000; }
@@ -14216,7 +14216,6 @@ a.single-achiv {
     font-size: 12px;
     line-height: 160%;
     text-align: justify;
-    font-weight: 500;
     color: rgba(0, 0, 0, 0.7); }
   .seo-text p {
     margin-bottom: 12px; }
@@ -14327,7 +14326,7 @@ a.single-achiv {
       margin-bottom: 6px; }
       .footer-menu ul li a {
         font-style: normal;
-        font-weight: 500;
+        font-weight: normal;
         font-size: 12px;
         line-height: 150%;
         color: #000000;
@@ -14404,7 +14403,7 @@ a.single-achiv {
           justify-content: flex-start; }
   .footer__contacts a {
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 12px;
     line-height: 160%;
     color: #000000;
@@ -14422,7 +14421,7 @@ a.single-achiv {
   margin-bottom: 24px; }
   .footer__address p {
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 12px;
     line-height: 200%;
     color: #000000; }
@@ -14622,7 +14621,7 @@ a.single-achiv {
       font-size: 12px;
       line-height: 1.2;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: normal;
       color: rgba(0, 0, 0, 0.7);
       -webkit-transition: color 0.3s ease;
       -o-transition: color 0.3s ease;
@@ -14687,10 +14686,10 @@ a.single-achiv {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
@@ -14705,12 +14704,12 @@ a.single-achiv {
   -webkit-transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
   -o-transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-  padding: 7px 6px;
+  padding: 13px 6px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-style: normal;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 125%;
   text-align: center;
   text-transform: uppercase;
@@ -14976,13 +14975,9 @@ a.single-achiv {
       margin: 20px 0; }
     .news-inner__main .text p {
       width: 100%; }
-    .news-inner__main .text iframe {
-      max-width: 100% !important;
-      height: 340px !important; }
     .news-inner__main .text *:not(.btn) {
       font-size: 12px !important;
       line-height: 1.4 !important;
-      font-weight: 500;
       font-family: "Montserrat", sans-serif !important; }
     .news-inner__main .text .btn {
       margin-top: 25px;
@@ -15890,7 +15885,7 @@ a.single-achiv {
     color: #000000; }
   .company-column p {
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 12px;
     line-height: 160%;
     color: rgba(0, 0, 0, 0.7);
@@ -15925,7 +15920,7 @@ a.single-achiv {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       font-style: normal;
-      font-weight: 500;
+      font-weight: normal;
       font-size: 12px;
       line-height: 160%;
       color: rgba(0, 0, 0, 0.7);
@@ -15969,7 +15964,7 @@ a.single-achiv {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       font-style: normal;
-      font-weight: 500;
+      font-weight: normal;
       font-size: 12px;
       line-height: 160%;
       color: rgba(0, 0, 0, 0.7);
@@ -16234,7 +16229,7 @@ a.single-achiv {
     display: none; }
   .service-page__text p {
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 12px;
     line-height: 160%;
     color: #000000;
@@ -16485,8 +16480,7 @@ a.single-achiv {
       font-size: 12px;
       line-height: 150%;
       text-align: center;
-      color: #FFFFFF;
-      width: 100%; }
+      color: #FFFFFF; }
       .service-deliv .styled-form input[type="submit"]:hover {
         color: #00B9ED;
         background: #fff;
@@ -16598,7 +16592,7 @@ a.single-achiv {
     -webkit-box-shadow: 1px 1px 7px 1px rgba(0, 185, 237, 0.25);
             box-shadow: 1px 1px 7px 1px rgba(0, 185, 237, 0.25);
     border-radius: 3px;
-    height: 32px;
+    height: 30px;
     position: relative; }
     .reception__sel > span::after {
       width: 9px;
@@ -16808,7 +16802,7 @@ a.single-achiv {
        -moz-columns: 1;
             columns: 1; }
   .company-text__column p {
-    font-weight: 500;
+    font-weight: normal;
     font-size: 12px;
     line-height: 1.6;
     color: rgba(0, 0, 0, 0.7);
@@ -16863,7 +16857,7 @@ a.single-achiv {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       position: relative;
-      font-weight: 500;
+      font-weight: normal;
       font-size: 12px;
       line-height: 1.6;
       color: rgba(0, 0, 0, 0.7);
@@ -16906,21 +16900,19 @@ a.single-achiv {
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .fran-form .title {
-    width: calc(100% - 36px);
-    margin-left: 18px;
-    margin-right: 18px;
+    width: 100%;
     padding: 13px 4px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     text-align: center;
-    color: #000;
+    background: #00B9ED;
+    color: #fff;
     font-size: 16px;
     line-height: 1.25;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 12px 12px 0 0;
-    margin-bottom: 0;
-    border-bottom: 0.25px solid rgba(0, 0, 0, 0.25); }
+    margin-bottom: 0; }
   .fran-form .container_form {
     width: 100%;
     padding: 20px 18px;
@@ -16981,20 +16973,16 @@ a.single-achiv {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         border-radius: 3px;
-        padding: 3px 11px;
+        padding: 6px 11px;
         font-style: normal;
         font-weight: normal;
         font-size: 12px;
         line-height: 150%;
-        color: black;
-        height: 30px; }
+        color: black; }
     .fran-form .container_form .btn {
       background: #00B9ED;
       border: 1px solid #00B9ED;
-      color: #fff;
-      height: 32px;
-      text-transform: lowercase;
-      font-size: 12px; }
+      color: #fff; }
       .fran-form .container_form .btn:hover {
         background: #fff;
         color: #00B9ED; }
@@ -18753,8 +18741,6 @@ section.not_page {
       line-height: 1.25; } }
 
 @media screen and (max-width: 767px) {
-  .news-inner__main .text iframe {
-    height: 250px !important; }
   .no-results div {
     font-size: 24px; }
   .for-feed-back {
@@ -19275,17 +19261,6 @@ section.not_page {
       height: calc((100% - 10px) / 2); } }
 
 @media screen and (max-width: 600px) {
-  .cour-non {
-    display: none !important; }
-  .desktop-buttons .desk-btn {
-    height: 32px;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .desktop-buttons .desk-btn:nth-child(even) {
-    margin-right: 10px;
-    margin-bottom: 0; }
   .fran-form .styled-form .form_row > .date_col {
     width: 100%; }
   .fran-form .styled-form .container_fran {
@@ -19720,8 +19695,6 @@ section.not_page {
                     box-sizing: border-box; } }
 
 @media screen and (max-width: 413px) {
-  .company__news.company__news--menu .single-card {
-    min-height: 68px; }
   .sliders-banners__container {
     height: 150px; }
   .btn-cour, .btn-cab {

@@ -1,7 +1,7 @@
 <section class="desktop-buttons">
     <div class="container">
         <div class="desk-buttons__list">
-            <a href="/onlain-zakaz/" class="desk-btn">Виклик кур`єра</a>
+            <a href="/uslugi/distantsionnyy-zakaz.html" class="desk-btn cour-non">Виклик кур`єра</a>
             <a href="/tseny/" class="desk-btn">Ціни</a>
             <a href="/o-kompanii/kontakty.html" class="desk-btn">Пункти прийому</a>
         </div>

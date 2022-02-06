@@ -56,24 +56,36 @@ $subitems = dbQuery("SELECT * FROM content WHERE parentid = 27 AND ispublish = 1
                 </div>
                 <aside class="company-side">
                     <div class="company__news">
-                        <?php
-                        $blacklist_arr = array(3381, 3383, 3384, 3385, 3386);
-                        $arr = dbQuery("SELECT id,url,name,(SELECT id FROM images WHERE source = 1 AND parentid = content.id AND is_main = 1) as imid,(SELECT format FROM images WHERE source = 1 AND parentid = content.id AND is_main = 1) as imformat FROM content WHERE parentid = 2890 AND ispublish = 1 AND id != $head[id] AND id NOT IN (" . implode(',', $blacklist_arr) . ") ORDER BY rand() LIMIT 0,6 ");
-                        foreach ($arr as $r) {
-                            $img = getImageById($r["imid"]);
-                            ?>
-
-                            <a href="<?= $r["url"] ?>" class="single-card ">
-                                <div class="text">
-                                    <span class="tag">Новости</span>
-                                    <p><?= $r["name"] ?></p>
-
-                                    <div class="btn btn--blue">Подробнее</div>
-
-                                </div>
-                            </a>
-
-                        <?php } ?>
+                        <a href="/klienty/" class="single-card ">
+                            <div class="text">
+                                <p>Наши клиенты и партнеры</p>
+                                <div class="btn btn--blue">Перейти</div>
+                            </div>
+                        </a>
+                        <a href="/franchayzing/o-franchayzinge.html" class="single-card ">
+                            <div class="text">
+                                <p>Франчайзинг</p>
+                                <div class="btn btn--blue">Перейти</div>
+                            </div>
+                        </a>
+                        <a href="/vakansii/" class="single-card ">
+                            <div class="text">
+                                <p>Вакансии</p>
+                                <div class="btn btn--blue">Перейти</div>
+                            </div>
+                        </a>
+                        <a href="/media/" class="single-card ">
+                            <div class="text">
+                                <p>Мы в MassMedia</p>
+                                <div class="btn btn--blue">Перейти</div>
+                            </div>
+                        </a>
+                        <a href="/for-feedback/" class="single-card ">
+                            <div class="text">
+                                <p>Для обратной связи</p>
+                                <div class="btn btn--blue">Перейти</div>
+                            </div>
+                        </a>
                     </div>
 
                 </aside>

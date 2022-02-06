@@ -68,7 +68,7 @@
                         <a href="https://ua.unmomento.com.ua/" class="active">UA</a>
                     </div>
                     <div class="header-top__btns">
-                        <a href="/onlain-zakaz/" class="btn-cour">Викликати кур'єра</a>
+                        <a href="/uslugi/distantsionnyy-zakaz.html" class="btn-cour">Викликати кур'єра</a>
                         <a href="https://ua.unmomento.com.ua/personal-account/" class="btn-cab">Кабінет</a>
                     </div>
                 </div>

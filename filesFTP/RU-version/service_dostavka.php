@@ -378,7 +378,7 @@
 <section class="desktop-buttons">
     <div class="container">
         <div class="desk-buttons__list">
-            <a href="/onlain-zakaz/" class="desk-btn">Вызов курьера</a>
+            <a href="/uslugi/distantsionnyy-zakaz.html" class="desk-btn cour-non">Вызов курьера</a>
             <div class="desk-socials">
                 <a target="_blank" href="https://m.me/momento.un?ref=UNMOMENTO" class="desk-soc">
                     <img src="<?php echo _TEMPL.'build/img/ds-ms.svg'?>" alt="">

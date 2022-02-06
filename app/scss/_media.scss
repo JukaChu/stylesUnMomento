@@ -958,6 +958,9 @@
 }
 
 @media screen and (max-width: 767px) {
+  .news-inner__main .text iframe {
+    height: 250px !important;
+  }
   .no-results {
     div {
       font-size: 24px;
@@ -1557,6 +1560,20 @@
 }
 
 @media screen and (max-width: 600px) {
+  .cour-non {
+    display: none !important;
+  }
+  .desktop-buttons {
+    .desk-btn {
+      height: 32px;
+      align-items: center;
+    }
+    .desk-btn:nth-child(even) {
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  }
+
   .fran-form .styled-form .form_row > .date_col {
     width: 100%;
   }
@@ -2045,6 +2062,13 @@
 }
 
 @media screen and (max-width: 413px) {
+  .company__news {
+    &.company__news--menu {
+      .single-card {
+        min-height: 68px;
+      }
+    }
+  }
   .sliders-banners__container {
     height: 150px;
   }
