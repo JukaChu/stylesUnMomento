@@ -507,6 +507,11 @@
 }
 
 @media screen and (max-width: 992px) {
+  .desk-soc {
+    width: 27px;
+    height: 27px;
+    margin-right: 25px;
+  }
   .single-client-block {
     width: calc((100% / 8) - (175px / 8));
     padding-top: calc((100% / 8) - (175px / 8));
@@ -518,6 +523,13 @@
   }
   .desk-buttons__list .desk-socials {
     margin-right: 10px;
+    width: calc((100% / 3) - (20px / 3));
+    .desk-soc {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
   .footer__container .footer-logo {
     margin-right: 10%;
@@ -1560,6 +1572,12 @@
 }
 
 @media screen and (max-width: 600px) {
+  .table_prise .hed_row.check_block .content_col .square_check {
+    top: 7px;
+  }
+  .desk-buttons__list .desk-socials {
+    justify-content: center;
+  }
   .cour-non {
     display: none !important;
   }

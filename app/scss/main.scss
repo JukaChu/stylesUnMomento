@@ -1935,7 +1935,7 @@ a.single-achiv {
 
 .desk-socials {
   width: 100%;
-  margin-top: 36px;
+  margin-top: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1943,9 +1943,9 @@ a.single-achiv {
 }
 
 .desk-soc {
-  width: 45px;
-  height: 45px;
-  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+  margin-right: 31px;
 
   &:last-child {
     margin-right: 0;
@@ -2348,6 +2348,7 @@ a.single-achiv {
 
   .container_prise .sidebar .filters li {
     font-size: 10px;
+    font-weight: 500;
     line-height: 160%;
     color: #000000;
     transition: color 0.3s ease, font-weight 0.3s ease;
@@ -2453,7 +2454,7 @@ a.single-achiv {
 
   .table_prise .hed_row .content_col {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 10px;
     line-height: 160%;
     text-align: center;
@@ -2513,7 +2514,7 @@ a.single-achiv {
 
   .table_prise .content_row .content_col {
     font-style: normal;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 12px;
     line-height: 160%;
     text-align: center;
@@ -2602,6 +2603,7 @@ a.single-achiv {
   border-radius: 3px;
   font-size: 10px;
   line-height: 14px;
+  font-weight: 400;
 }
 
 .form-prices {
@@ -2630,7 +2632,7 @@ a.single-achiv {
 
   .namber_result {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 12px;
     line-height: 125%;
     color: rgba(0, 0, 0, 0.3);
@@ -4331,9 +4333,10 @@ a.single-achiv {
 
 .desk-buttons__list {
   .desk-socials {
-    width: auto;
+    width: calc((100% / 3) - (72px / 3));
     margin-top: 0;
     margin-right: 36px;
+    justify-content: space-between;
   }
 }
 
