@@ -367,7 +367,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
   border: 1px solid $blue;
 
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 12px;
   line-height: 150%;
   text-align: center;
@@ -1298,7 +1298,7 @@ a.single-achiv {
 .btn {
   font-style: normal;
   font-weight: 600;
-  font-size: 9px;
+  font-size: 10px;
   line-height: 125%;
   display: inline-block;
   text-align: center;
@@ -1984,7 +1984,7 @@ a.single-achiv {
 
 .service-subtitle {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 14px;
   line-height: 125%;
   color: rgba(0, 0, 0, 0.7);
@@ -2658,12 +2658,11 @@ a.single-achiv {
         padding: 6px 11px;
 
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 1);
         margin-bottom: 14px;
-
         &::placeholder {
           color: rgba(0, 0, 0, 0.3);
         }
@@ -3366,7 +3365,7 @@ a.single-achiv {
 
     em {
       color: rgba(0, 0, 0, 0.7);
-      font-weight: 300;
+      font-weight: 500;
     }
   }
 
@@ -3592,8 +3591,8 @@ a.single-achiv {
 
   > p {
     font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
+    font-weight: 500;
+    font-size: 12px;
     line-height: 160%;
     color: rgba(0, 0, 0, 0.5);
     padding-left: 16px;
@@ -3609,7 +3608,7 @@ a.single-achiv {
 
   > span {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 12px;
     line-height: 150%;
     color: #000000;
@@ -3739,8 +3738,8 @@ a.single-achiv {
       margin-right: 12px;
 
       font-style: normal;
-      font-weight: 600;
-      font-size: 9px;
+      font-weight: 500;
+      font-size: 12px;
       line-height: 125%;
       text-align: center;
       text-transform: uppercase;
@@ -3770,7 +3769,7 @@ a.single-achiv {
 
     font-style: normal;
     font-weight: 600;
-    font-size: 8px;
+    font-size: 10px;
     line-height: 125%;
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 15px;
@@ -4384,16 +4383,18 @@ a.single-achiv {
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
+    padding-top: 5px;
 
     small, p {
       font-style: normal;
-      font-weight: 600;
-      font-size: 8px;
+      font-weight: 500;
+      font-size: 12px;
       line-height: 125%;
       color: rgba(0, 0, 0, 0.5);
       margin-right: 5px;
       display: inline-block;
       flex-grow: 1;
+      margin-bottom: 0 !important;
     }
   }
 }

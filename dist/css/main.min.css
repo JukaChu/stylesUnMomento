@@ -13012,7 +13012,7 @@ p, h1, ul, ol, h2, h3, h4, h5, h6 {
           justify-content: center;
   border: 1px solid #00B9ED;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 12px;
   line-height: 150%;
   text-align: center;
@@ -14095,7 +14095,7 @@ a.single-achiv {
 .btn {
   font-style: normal;
   font-weight: 600;
-  font-size: 9px;
+  font-size: 10px;
   line-height: 125%;
   display: inline-block;
   text-align: center;
@@ -14805,7 +14805,7 @@ a.single-achiv {
 
 .service-subtitle {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 14px;
   line-height: 125%;
   color: rgba(0, 0, 0, 0.7);
@@ -15518,7 +15518,7 @@ a.single-achiv {
         border-radius: 3px;
         padding: 6px 11px;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: black;
@@ -16249,7 +16249,7 @@ a.single-achiv {
       color: #000000; }
     .service-page__text p em {
       color: rgba(0, 0, 0, 0.7);
-      font-weight: 300; }
+      font-weight: 500; }
 
 .service-page__adv {
   width: 100%;
@@ -16560,8 +16560,8 @@ a.single-achiv {
           flex-direction: column; }
   .receptions-select > p {
     font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
+    font-weight: 500;
+    font-size: 12px;
     line-height: 160%;
     color: rgba(0, 0, 0, 0.5);
     padding-left: 16px;
@@ -16575,7 +16575,7 @@ a.single-achiv {
   position: relative; }
   .reception__sel > span {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 12px;
     line-height: 150%;
     color: #000000;
@@ -16732,8 +16732,8 @@ a.single-achiv {
     border-radius: 3px;
     margin-right: 12px;
     font-style: normal;
-    font-weight: 600;
-    font-size: 9px;
+    font-weight: 500;
+    font-size: 12px;
     line-height: 125%;
     text-align: center;
     text-transform: uppercase;
@@ -16762,7 +16762,7 @@ a.single-achiv {
           align-items: flex-start;
   font-style: normal;
   font-weight: 600;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 125%;
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 15px; }
@@ -17496,11 +17496,12 @@ a.single-achiv {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+  padding-top: 5px; }
   .single-card .bottom small, .single-card .bottom p {
     font-style: normal;
-    font-weight: 600;
-    font-size: 8px;
+    font-weight: 500;
+    font-size: 12px;
     line-height: 125%;
     color: rgba(0, 0, 0, 0.5);
     margin-right: 5px;
@@ -17508,7 +17509,8 @@ a.single-achiv {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
         -ms-flex-positive: 1;
-            flex-grow: 1; }
+            flex-grow: 1;
+    margin-bottom: 0 !important; }
 
 .card-obt-cont .single-card {
   width: 100%;
@@ -18477,7 +18479,7 @@ section.not_page {
     width: calc((100% / 6) - (125px / 6));
     padding-top: calc((100% / 6) - (125px / 6)); }
   .single-card .bottom small, .single-card .bottom p {
-    font-size: 6px !important; }
+    font-size: 8px !important; }
   .card-obt-cont .single-card {
     min-height: 315px; }
   .receptions-select {
@@ -19179,9 +19181,9 @@ section.not_page {
 
 @media screen and (max-width: 620px) {
   .single-card .work {
-    font-size: 6px; }
+    font-size: 10px; }
     .single-card .work span {
-      font-size: 8px; }
+      font-size: 10px; }
   .single-card .line a {
     font-size: 6px; }
   .receptions__head {
@@ -19499,7 +19501,7 @@ section.not_page {
   .cards-slider__container {
     height: 520px; }
   .btn {
-    font-size: 6px;
+    font-size: 8px;
     padding: 3px;
     line-height: 125%; }
   .footer__container {

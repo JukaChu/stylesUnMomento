@@ -579,7 +579,7 @@
     padding-top: calc((100% / 6) - (125px / 6));
   }
   .single-card .bottom small, .single-card .bottom p {
-    font-size: 6px !important;
+    font-size: 8px !important;
   }
   .card-obt-cont .single-card {
     min-height: 315px;
@@ -1445,10 +1445,10 @@
 
 @media screen and (max-width: 620px) {
   .single-card .work {
-    font-size: 6px;
+    font-size: 10px;
 
     span {
-      font-size: 8px;
+      font-size: 10px;
     }
   }
   .single-card .line a {
@@ -1802,7 +1802,7 @@
     height: 520px;
   }
   .btn {
-    font-size: 6px;
+    font-size: 8px;
     padding: 3px;
     line-height: 125%;
   }
