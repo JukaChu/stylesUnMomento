@@ -16234,6 +16234,20 @@ a.single-achiv {
   margin-bottom: 30px; }
   .service-page__text .open-ser-txt {
     display: none; }
+  .service-page__text li, .service-page__text a {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 500; }
+  .service-page__text ul {
+    list-style: initial;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 20px; }
+  .service-page__text li {
+    margin-bottom: 10px; }
+    .service-page__text li:last-child {
+      margin-bottom: 0; }
   .service-page__text p {
     font-style: normal;
     font-weight: 500;
@@ -16441,37 +16455,37 @@ a.single-achiv {
       border-radius: 3px;
       padding: 6px 11px;
       font-style: normal;
-      font-weight: normal;
+      font-weight: 500;
       font-size: 12px;
       line-height: 150%;
       color: rgba(0, 0, 0, 0.8); }
       .service-deliv .styled-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"])::-webkit-input-placeholder, .service-deliv .styled-form .select-btn::-webkit-input-placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3); }
       .service-deliv .styled-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"])::-moz-placeholder, .service-deliv .styled-form .select-btn::-moz-placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3); }
       .service-deliv .styled-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):-ms-input-placeholder, .service-deliv .styled-form .select-btn:-ms-input-placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3); }
       .service-deliv .styled-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"])::-ms-input-placeholder, .service-deliv .styled-form .select-btn::-ms-input-placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3); }
       .service-deliv .styled-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"])::placeholder, .service-deliv .styled-form .select-btn::placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3); }
@@ -16945,31 +16959,31 @@ a.single-achiv {
               box-shadow: none !important; }
       .fran-form .container_form input::-webkit-input-placeholder, .fran-form .container_form textarea::-webkit-input-placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3); }
       .fran-form .container_form input::-moz-placeholder, .fran-form .container_form textarea::-moz-placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3); }
       .fran-form .container_form input:-ms-input-placeholder, .fran-form .container_form textarea:-ms-input-placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3); }
       .fran-form .container_form input::-ms-input-placeholder, .fran-form .container_form textarea::-ms-input-placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3); }
       .fran-form .container_form input::placeholder, .fran-form .container_form textarea::placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3); }
@@ -16985,7 +16999,7 @@ a.single-achiv {
         border-radius: 3px;
         padding: 3px 11px;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: black;
@@ -17067,7 +17081,9 @@ a.single-achiv {
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    position: relative; }
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden; }
     .service-slider .img img {
       position: absolute;
       top: 50%;
@@ -17859,7 +17875,7 @@ section.not_page {
     border-radius: 3px;
     padding: 6px 11px;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 12px;
     line-height: 150%;
     color: black; }
@@ -17984,6 +18000,37 @@ section.not_page {
           justify-content: center; }
   .cards-slider--video .cards-slider__container .single-card:not(:first-child) .img img {
     height: 140%; }
+
+.service-deliv .styled-form {
+  height: 100%; }
+
+.company-map.company-map__form {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  overflow: visible; }
+  .company-map.company-map__form .fran-form {
+    height: 100%;
+    margin: 0; }
+  .company-map.company-map__form .fran-form .container_form textarea {
+    min-height: 81px; }
+  .company-map.company-map__form .fran-form .container_form input[type="submit"] {
+    margin-left: calc(50% + 9px);
+    width: calc(50% - 9px); }
+  .company-map.company-map__form .fran-form .container_form .double-input {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .company-map.company-map__form .fran-form .container_form .double-input .input {
+      width: calc(50% - 9px); }
 
 @media screen and (min-width: 813px) {
   .company__text .img {
@@ -18471,6 +18518,14 @@ section.not_page {
     margin-bottom: 0; } }
 
 @media screen and (max-width: 812px) {
+  .service-page__text.visible {
+    max-height: none; }
+    .service-page__text.visible ul {
+      padding-left: 12px; }
+      .service-page__text.visible ul li, .service-page__text.visible ul a {
+        font-size: 10px; }
+      .service-page__text.visible ul li {
+        margin-bottom: 4px; }
   .textual-block .container div div {
     -webkit-columns: 2;
        -moz-columns: 2;
@@ -19672,6 +19727,52 @@ section.not_page {
     height: calc(100vh - 146px); } }
 
 @media screen and (max-width: 540px) {
+  .company__contacts-container.company__contacts-container--lined .company-time {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .company__contacts-container.company__contacts-container--lined .company-time strong {
+      display: inline-block;
+      width: 100%; }
+    .company__contacts-container.company__contacts-container--lined .company-time span {
+      display: inline-block;
+      margin-right: 5px; }
+    .company__contacts-container.company__contacts-container--lined .company-time p {
+      min-width: 53%; }
+    .company__contacts-container.company__contacts-container--lined .company-time a {
+      width: 100%;
+      display: inline-block; }
+  .company-map.company-map__form .fran-form .container_form .double-input {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .company-map.company-map__form .fran-form .container_form input[type="submit"] {
+    width: 100%;
+    margin-left: 0; }
+  .company-map.company-map__form .fran-form .container_form .double-input .input {
+    width: 100%; }
+  .service-page__text.visible {
+    margin-bottom: 14px; }
+  .company__contacts-container.company__contacts-container--lined {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .company__contacts-container.company__contacts-container--lined .company-time {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 6px; }
+    .company__contacts-container.company__contacts-container--lined .company-map {
+      width: 100%;
+      height: auto; }
   .card-obt-cont .single-card {
     min-height: 239px; }
   .cord-adv__single p {

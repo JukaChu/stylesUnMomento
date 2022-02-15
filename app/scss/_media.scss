@@ -568,6 +568,18 @@
 }
 
 @media screen and (max-width: 812px) {
+  .service-page__text.visible {
+    max-height: none;
+    ul {
+      padding-left: 12px;
+      li, a {
+        font-size: 10px;
+      }
+      li {
+        margin-bottom: 4px;
+      }
+    }
+  }
   .textual-block .container div div {
     columns:2;
   }
@@ -1980,6 +1992,51 @@
 }
 
 @media screen and (max-width: 540px) {
+  .company__contacts-container.company__contacts-container--lined .company-time {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    strong {
+      display: inline-block;
+      width: 100%;
+    }
+    span {
+      display: inline-block;
+      margin-right: 5px;
+    }
+    p {
+      min-width: 53%;
+    }
+    a {
+      width: 100%;
+      display: inline-block;
+    }
+  }
+  .company-map.company-map__form .fran-form .container_form .double-input {
+    flex-wrap: wrap;
+  }
+  .company-map.company-map__form .fran-form .container_form input[type="submit"] {
+    width: 100%;
+    margin-left: 0;
+  }
+  .company-map.company-map__form .fran-form .container_form .double-input .input {
+    width: 100%;
+  }
+  .service-page__text.visible {
+    margin-bottom: 14px;
+  }
+  .company__contacts-container.company__contacts-container--lined {
+    flex-wrap: wrap;
+    .company-time {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 6px;
+    }
+    .company-map {
+      width: 100%;
+      height: auto;
+    }
+  }
   .card-obt-cont .single-card {
     min-height: 239px;
   }

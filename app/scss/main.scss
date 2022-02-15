@@ -3346,7 +3346,23 @@ a.single-achiv {
   .open-ser-txt {
     display: none;
   }
-
+  li, a {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  ul {
+    list-style: initial;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   p {
     font-style: normal;
     font-weight: 500;
@@ -3520,7 +3536,7 @@ a.single-achiv {
       border-radius: 3px;
       padding: 6px 11px;
       font-style: normal;
-      font-weight: normal;
+      font-weight: 500;
       font-size: 12px;
       line-height: 150%;
       color: rgba(0, 0, 0, 0.8);
@@ -3528,7 +3544,7 @@ a.single-achiv {
 
       &::placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3);
@@ -3948,7 +3964,7 @@ a.single-achiv {
 
       &::placeholder {
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: rgba(0, 0, 0, 0.3);
@@ -3968,7 +3984,7 @@ a.single-achiv {
         border-radius: 3px;
         padding: 3px 11px;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: black;
@@ -4054,6 +4070,8 @@ a.single-achiv {
     align-items: center;
     justify-content: flex-end;
     position: relative;
+    border-radius: 12px;
+    overflow: hidden;
 
     img {
       position: absolute;
@@ -4558,7 +4576,6 @@ a.single-achiv {
     font-size: 14px;
     line-height: 1.2;
     font-weight: 400;
-
   }
   ul {
     list-style: initial;
@@ -4705,7 +4722,7 @@ section.not_page {
         border-radius: 3px;
         padding: 6px 11px;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 500;
         font-size: 12px;
         line-height: 150%;
         color: black;
@@ -4822,6 +4839,36 @@ section.not_page {
   justify-content: center;
   img {
     height: 140%;
+  }
+}
+
+.service-deliv .styled-form {
+  height: 100%;
+}
+.company-map.company-map__form {
+  box-shadow: none;
+  overflow: visible;
+  .fran-form {
+    height: 100%;
+    margin: 0;
+  }
+  .fran-form .container_form textarea {
+    min-height: 81px;
+  }
+  .fran-form .container_form {
+    input[type="submit"] {
+      margin-left: calc(50% + 9px);
+      width: calc(50% - 9px);
+    }
+    .double-input {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      .input {
+        width: calc(50% - 9px);
+
+      }
+    }
   }
 }
 @import "media";
